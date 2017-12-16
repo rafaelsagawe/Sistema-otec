@@ -17,6 +17,24 @@ namespace Sistema_otec
             InitializeComponent();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if ((textBox2.Text == "rafael") && (textBox1.Text == "123"))
+            {
+                Frm_principal frm = new Frm_principal();
+                frm.Show();
+                this.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Usuário ou senha invalidos", "Ocorreu um erro de autenticação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+                
+        }
     }
 }
