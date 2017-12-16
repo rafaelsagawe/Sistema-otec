@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Sistema_otec
 {
-    public partial class Form1 : Form
+    public partial class Frm_Splash : Form
     {
-        public Form1()
+        public Frm_Splash()
         {
             InitializeComponent();
         }
@@ -25,7 +25,11 @@ namespace Sistema_otec
             }
             else
             {
-                Application.Exit(); //sair da aplicação
+                //Application.Exit(); //sair da aplicação
+                timer1.Enabled = false;
+                Frm_login frm = new Frm_login();
+                frm.Show();
+                this.Visible = false;
             }
         }
     }

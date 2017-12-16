@@ -1,6 +1,6 @@
 ﻿namespace Sistema_otec
 {
-    partial class Form1
+    partial class Frm_Splash
     {
         /// <summary>
         /// Variável de designer necessária.
