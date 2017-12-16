@@ -37,5 +37,25 @@ namespace Sistema_otec
         {
             Application.Exit();
         }
+
+        private void Frm_principal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void calculadoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("calc");
+        }
+
+        private void wordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("winword");
+        }
+
+        private void blocoDeNotasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("notepad");
+        }
     }
 }
