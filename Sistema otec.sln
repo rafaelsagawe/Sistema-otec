@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistema otec", "Sistema otec\Sistema otec.csproj", "{D4250717-67D1-49A0-B7F9-FEF12C544EA4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistema de Biblioteca", "Sistema otec\Sistema de Biblioteca.csproj", "{D4250717-67D1-49A0-B7F9-FEF12C544EA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
