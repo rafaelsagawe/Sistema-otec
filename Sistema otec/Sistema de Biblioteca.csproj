@@ -45,6 +45,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Frm_cadEditorar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_cadEditorar.Designer.cs">
+      <DependentUpon>Frm_cadEditorar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_cadLivros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_cadLivros.Designer.cs">
+      <DependentUpon>Frm_cadLivros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_cadLocatario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_cadLocatario.Designer.cs">
+      <DependentUpon>Frm_cadLocatario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_funcionario.Designer.cs">
+      <DependentUpon>Frm_funcionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +89,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_cadEditorar.resx">
+      <DependentUpon>Frm_cadEditorar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_cadLivros.resx">
+      <DependentUpon>Frm_cadLivros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_cadLocatario.resx">
+      <DependentUpon>Frm_cadLocatario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_funcionario.resx">
+      <DependentUpon>Frm_funcionario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_login.resx">
       <DependentUpon>Frm_login.cs</DependentUpon>
     </EmbeddedResource>

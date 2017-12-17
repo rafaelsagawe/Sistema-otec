@@ -19,7 +19,8 @@ namespace Sistema_otec
 
         private void funcionárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Frm_funcionario frm_fun = new Frm_funcionario();
+            frm_fun.Show();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -56,6 +57,24 @@ namespace Sistema_otec
         private void blocoDeNotasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("notepad");
+        }
+
+        private void livrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_cadLivros frm_cl = new Frm_cadLivros();
+            frm_cl.Show();
+        }
+
+        private void editorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_cadEditorar frm_cedi = new Frm_cadEditorar();
+            frm_cedi.Show();
+        }
+
+        private void locatarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_cadLocatario frm_cloc = new Frm_cadLocatario();
+            frm_cloc.Show();
         }
     }
 }
