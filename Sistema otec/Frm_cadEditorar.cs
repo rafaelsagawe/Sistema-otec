@@ -69,5 +69,10 @@ namespace Sistema_otec
         {
             this.Dispose();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            this.editoraTableAdapter.FillByEditoraNome(bibliotecaDataSet.editora, textBox1.Text);
+        }
     }
 }
