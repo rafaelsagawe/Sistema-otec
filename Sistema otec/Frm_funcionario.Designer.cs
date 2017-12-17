@@ -40,20 +40,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bibliotecaDataSet = new Sistema_otec.bibliotecaDataSet();
-            this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.funcionarioTableAdapter = new Sistema_otec.bibliotecaDataSetTableAdapters.funcionarioTableAdapter();
-            this.tableAdapterManager = new Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager();
-            this.id_funcionarioTextBox = new System.Windows.Forms.TextBox();
-            this.nomeTextBox = new System.Windows.Forms.TextBox();
-            this.loginTextBox = new System.Windows.Forms.TextBox();
-            this.senhaTextBox = new System.Windows.Forms.TextBox();
-            this.perfilTextBox = new System.Windows.Forms.TextBox();
-            this.situacaoTextBox = new System.Windows.Forms.TextBox();
             this.funcionarioBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bibliotecaDataSet = new Sistema_otec.bibliotecaDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -65,6 +55,16 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.funcionarioBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.id_funcionarioTextBox = new System.Windows.Forms.TextBox();
+            this.nomeTextBox = new System.Windows.Forms.TextBox();
+            this.loginTextBox = new System.Windows.Forms.TextBox();
+            this.senhaTextBox = new System.Windows.Forms.TextBox();
+            this.perfilTextBox = new System.Windows.Forms.TextBox();
+            this.situacaoTextBox = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.funcionarioTableAdapter = new Sistema_otec.bibliotecaDataSetTableAdapters.funcionarioTableAdapter();
+            this.tableAdapterManager = new Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager();
             id_funcionarioLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             loginLabel = new System.Windows.Forms.Label();
@@ -73,12 +73,66 @@
             situacaoLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingNavigator)).BeginInit();
             this.funcionarioBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // id_funcionarioLabel
+            // 
+            id_funcionarioLabel.AutoSize = true;
+            id_funcionarioLabel.Location = new System.Drawing.Point(92, 105);
+            id_funcionarioLabel.Name = "id_funcionarioLabel";
+            id_funcionarioLabel.Size = new System.Drawing.Size(73, 13);
+            id_funcionarioLabel.TabIndex = 0;
+            id_funcionarioLabel.Text = "id funcionario:";
+            // 
+            // nomeLabel
+            // 
+            nomeLabel.AutoSize = true;
+            nomeLabel.Location = new System.Drawing.Point(92, 131);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(36, 13);
+            nomeLabel.TabIndex = 2;
+            nomeLabel.Text = "nome:";
+            // 
+            // loginLabel
+            // 
+            loginLabel.AutoSize = true;
+            loginLabel.Location = new System.Drawing.Point(92, 157);
+            loginLabel.Name = "loginLabel";
+            loginLabel.Size = new System.Drawing.Size(32, 13);
+            loginLabel.TabIndex = 4;
+            loginLabel.Text = "login:";
+            // 
+            // senhaLabel
+            // 
+            senhaLabel.AutoSize = true;
+            senhaLabel.Location = new System.Drawing.Point(92, 183);
+            senhaLabel.Name = "senhaLabel";
+            senhaLabel.Size = new System.Drawing.Size(39, 13);
+            senhaLabel.TabIndex = 6;
+            senhaLabel.Text = "senha:";
+            // 
+            // perfilLabel
+            // 
+            perfilLabel.AutoSize = true;
+            perfilLabel.Location = new System.Drawing.Point(92, 209);
+            perfilLabel.Name = "perfilLabel";
+            perfilLabel.Size = new System.Drawing.Size(32, 13);
+            perfilLabel.TabIndex = 8;
+            perfilLabel.Text = "perfil:";
+            // 
+            // situacaoLabel
+            // 
+            situacaoLabel.AutoSize = true;
+            situacaoLabel.Location = new System.Drawing.Point(92, 235);
+            situacaoLabel.Name = "situacaoLabel";
+            situacaoLabel.Size = new System.Drawing.Size(50, 13);
+            situacaoLabel.TabIndex = 10;
+            situacaoLabel.Text = "situacao:";
             // 
             // button2
             // 
@@ -88,6 +142,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -132,154 +187,6 @@
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(583, 337);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Consulta";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 432);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // bibliotecaDataSet
-            // 
-            this.bibliotecaDataSet.DataSetName = "bibliotecaDataSet";
-            this.bibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // funcionarioBindingSource
-            // 
-            this.funcionarioBindingSource.DataMember = "funcionario";
-            this.funcionarioBindingSource.DataSource = this.bibliotecaDataSet;
-            // 
-            // funcionarioTableAdapter
-            // 
-            this.funcionarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.editoraTableAdapter = null;
-            this.tableAdapterManager.funcionarioTableAdapter = this.funcionarioTableAdapter;
-            this.tableAdapterManager.itemLocacaoTableAdapter = null;
-            this.tableAdapterManager.livrosTableAdapter = null;
-            this.tableAdapterManager.locacaoTableAdapter = null;
-            this.tableAdapterManager.locatarioTableAdapter = null;
-            this.tableAdapterManager.perfilTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // id_funcionarioLabel
-            // 
-            id_funcionarioLabel.AutoSize = true;
-            id_funcionarioLabel.Location = new System.Drawing.Point(92, 105);
-            id_funcionarioLabel.Name = "id_funcionarioLabel";
-            id_funcionarioLabel.Size = new System.Drawing.Size(73, 13);
-            id_funcionarioLabel.TabIndex = 0;
-            id_funcionarioLabel.Text = "id funcionario:";
-            // 
-            // id_funcionarioTextBox
-            // 
-            this.id_funcionarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "id_funcionario", true));
-            this.id_funcionarioTextBox.Location = new System.Drawing.Point(171, 102);
-            this.id_funcionarioTextBox.Name = "id_funcionarioTextBox";
-            this.id_funcionarioTextBox.Size = new System.Drawing.Size(100, 20);
-            this.id_funcionarioTextBox.TabIndex = 1;
-            // 
-            // nomeLabel
-            // 
-            nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(92, 131);
-            nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(36, 13);
-            nomeLabel.TabIndex = 2;
-            nomeLabel.Text = "nome:";
-            // 
-            // nomeTextBox
-            // 
-            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(171, 128);
-            this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(100, 20);
-            this.nomeTextBox.TabIndex = 3;
-            // 
-            // loginLabel
-            // 
-            loginLabel.AutoSize = true;
-            loginLabel.Location = new System.Drawing.Point(92, 157);
-            loginLabel.Name = "loginLabel";
-            loginLabel.Size = new System.Drawing.Size(32, 13);
-            loginLabel.TabIndex = 4;
-            loginLabel.Text = "login:";
-            // 
-            // loginTextBox
-            // 
-            this.loginTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "login", true));
-            this.loginTextBox.Location = new System.Drawing.Point(171, 154);
-            this.loginTextBox.Name = "loginTextBox";
-            this.loginTextBox.Size = new System.Drawing.Size(100, 20);
-            this.loginTextBox.TabIndex = 5;
-            // 
-            // senhaLabel
-            // 
-            senhaLabel.AutoSize = true;
-            senhaLabel.Location = new System.Drawing.Point(92, 183);
-            senhaLabel.Name = "senhaLabel";
-            senhaLabel.Size = new System.Drawing.Size(39, 13);
-            senhaLabel.TabIndex = 6;
-            senhaLabel.Text = "senha:";
-            // 
-            // senhaTextBox
-            // 
-            this.senhaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "senha", true));
-            this.senhaTextBox.Location = new System.Drawing.Point(171, 180);
-            this.senhaTextBox.Name = "senhaTextBox";
-            this.senhaTextBox.Size = new System.Drawing.Size(100, 20);
-            this.senhaTextBox.TabIndex = 7;
-            // 
-            // perfilLabel
-            // 
-            perfilLabel.AutoSize = true;
-            perfilLabel.Location = new System.Drawing.Point(92, 209);
-            perfilLabel.Name = "perfilLabel";
-            perfilLabel.Size = new System.Drawing.Size(32, 13);
-            perfilLabel.TabIndex = 8;
-            perfilLabel.Text = "perfil:";
-            // 
-            // perfilTextBox
-            // 
-            this.perfilTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "perfil", true));
-            this.perfilTextBox.Location = new System.Drawing.Point(171, 206);
-            this.perfilTextBox.Name = "perfilTextBox";
-            this.perfilTextBox.Size = new System.Drawing.Size(100, 20);
-            this.perfilTextBox.TabIndex = 9;
-            // 
-            // situacaoLabel
-            // 
-            situacaoLabel.AutoSize = true;
-            situacaoLabel.Location = new System.Drawing.Point(92, 235);
-            situacaoLabel.Name = "situacaoLabel";
-            situacaoLabel.Size = new System.Drawing.Size(50, 13);
-            situacaoLabel.TabIndex = 10;
-            situacaoLabel.Text = "situacao:";
-            // 
-            // situacaoTextBox
-            // 
-            this.situacaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "situacao", true));
-            this.situacaoTextBox.Location = new System.Drawing.Point(171, 232);
-            this.situacaoTextBox.Name = "situacaoTextBox";
-            this.situacaoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.situacaoTextBox.TabIndex = 11;
-            // 
             // funcionarioBindingNavigator
             // 
             this.funcionarioBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
@@ -318,6 +225,16 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            // 
+            // funcionarioBindingSource
+            // 
+            this.funcionarioBindingSource.DataMember = "funcionario";
+            this.funcionarioBindingSource.DataSource = this.bibliotecaDataSet;
+            // 
+            // bibliotecaDataSet
+            // 
+            this.bibliotecaDataSet.DataSetName = "bibliotecaDataSet";
+            this.bibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -403,6 +320,90 @@
             this.funcionarioBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.funcionarioBindingNavigatorSaveItem.Text = "Salvar Dados";
             // 
+            // id_funcionarioTextBox
+            // 
+            this.id_funcionarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "id_funcionario", true));
+            this.id_funcionarioTextBox.Location = new System.Drawing.Point(171, 102);
+            this.id_funcionarioTextBox.Name = "id_funcionarioTextBox";
+            this.id_funcionarioTextBox.Size = new System.Drawing.Size(100, 20);
+            this.id_funcionarioTextBox.TabIndex = 1;
+            // 
+            // nomeTextBox
+            // 
+            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "nome", true));
+            this.nomeTextBox.Location = new System.Drawing.Point(171, 128);
+            this.nomeTextBox.Name = "nomeTextBox";
+            this.nomeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nomeTextBox.TabIndex = 3;
+            // 
+            // loginTextBox
+            // 
+            this.loginTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "login", true));
+            this.loginTextBox.Location = new System.Drawing.Point(171, 154);
+            this.loginTextBox.Name = "loginTextBox";
+            this.loginTextBox.Size = new System.Drawing.Size(100, 20);
+            this.loginTextBox.TabIndex = 5;
+            // 
+            // senhaTextBox
+            // 
+            this.senhaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "senha", true));
+            this.senhaTextBox.Location = new System.Drawing.Point(171, 180);
+            this.senhaTextBox.Name = "senhaTextBox";
+            this.senhaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.senhaTextBox.TabIndex = 7;
+            // 
+            // perfilTextBox
+            // 
+            this.perfilTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "perfil", true));
+            this.perfilTextBox.Location = new System.Drawing.Point(171, 206);
+            this.perfilTextBox.Name = "perfilTextBox";
+            this.perfilTextBox.Size = new System.Drawing.Size(100, 20);
+            this.perfilTextBox.TabIndex = 9;
+            // 
+            // situacaoTextBox
+            // 
+            this.situacaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "situacao", true));
+            this.situacaoTextBox.Location = new System.Drawing.Point(171, 232);
+            this.situacaoTextBox.Name = "situacaoTextBox";
+            this.situacaoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.situacaoTextBox.TabIndex = 11;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(583, 337);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Consulta";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(-2, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 432);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // funcionarioTableAdapter
+            // 
+            this.funcionarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.editoraTableAdapter = null;
+            this.tableAdapterManager.funcionarioTableAdapter = this.funcionarioTableAdapter;
+            this.tableAdapterManager.itemLocacaoTableAdapter = null;
+            this.tableAdapterManager.livrosTableAdapter = null;
+            this.tableAdapterManager.locacaoTableAdapter = null;
+            this.tableAdapterManager.locatarioTableAdapter = null;
+            this.tableAdapterManager.perfilTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // Frm_funcionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -423,12 +424,12 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingNavigator)).EndInit();
             this.funcionarioBindingNavigator.ResumeLayout(false);
             this.funcionarioBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_cadLocatario));
             System.Windows.Forms.Label id_locatarioLabel;
             System.Windows.Forms.Label nomeLabel;
             System.Windows.Forms.Label datanascLabel;
@@ -45,30 +44,14 @@
             System.Windows.Forms.Label serieLabel;
             System.Windows.Forms.Label escolaLabel;
             System.Windows.Forms.Label profissaoLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_cadLocatario));
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bibliotecaDataSet = new Sistema_otec.bibliotecaDataSet();
-            this.locatarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.locatarioTableAdapter = new Sistema_otec.bibliotecaDataSetTableAdapters.locatarioTableAdapter();
-            this.tableAdapterManager = new Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager();
-            this.locatarioBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.locatarioBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.id_locatarioTextBox = new System.Windows.Forms.TextBox();
+            this.locatarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bibliotecaDataSet = new Sistema_otec.bibliotecaDataSet();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.datanascDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.enderecoTextBox = new System.Windows.Forms.TextBox();
@@ -83,6 +66,23 @@
             this.serieTextBox = new System.Windows.Forms.TextBox();
             this.escolaTextBox = new System.Windows.Forms.TextBox();
             this.profissaoTextBox = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.locatarioTableAdapter = new Sistema_otec.bibliotecaDataSetTableAdapters.locatarioTableAdapter();
+            this.tableAdapterManager = new Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager();
+            this.locatarioBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.locatarioBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             id_locatarioLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             datanascLabel = new System.Windows.Forms.Label();
@@ -100,12 +100,162 @@
             profissaoLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.locatarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.locatarioBindingNavigator)).BeginInit();
             this.locatarioBindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // id_locatarioLabel
+            // 
+            id_locatarioLabel.AutoSize = true;
+            id_locatarioLabel.Location = new System.Drawing.Point(71, 20);
+            id_locatarioLabel.Name = "id_locatarioLabel";
+            id_locatarioLabel.Size = new System.Drawing.Size(61, 13);
+            id_locatarioLabel.TabIndex = 0;
+            id_locatarioLabel.Text = "id locatario:";
+            id_locatarioLabel.UseWaitCursor = true;
+            // 
+            // nomeLabel
+            // 
+            nomeLabel.AutoSize = true;
+            nomeLabel.Location = new System.Drawing.Point(71, 46);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(36, 13);
+            nomeLabel.TabIndex = 2;
+            nomeLabel.Text = "nome:";
+            nomeLabel.UseWaitCursor = true;
+            // 
+            // datanascLabel
+            // 
+            datanascLabel.AutoSize = true;
+            datanascLabel.Location = new System.Drawing.Point(71, 73);
+            datanascLabel.Name = "datanascLabel";
+            datanascLabel.Size = new System.Drawing.Size(54, 13);
+            datanascLabel.TabIndex = 4;
+            datanascLabel.Text = "datanasc:";
+            datanascLabel.UseWaitCursor = true;
+            // 
+            // enderecoLabel
+            // 
+            enderecoLabel.AutoSize = true;
+            enderecoLabel.Location = new System.Drawing.Point(71, 98);
+            enderecoLabel.Name = "enderecoLabel";
+            enderecoLabel.Size = new System.Drawing.Size(55, 13);
+            enderecoLabel.TabIndex = 6;
+            enderecoLabel.Text = "endereco:";
+            enderecoLabel.UseWaitCursor = true;
+            // 
+            // bairroLabel
+            // 
+            bairroLabel.AutoSize = true;
+            bairroLabel.Location = new System.Drawing.Point(71, 124);
+            bairroLabel.Name = "bairroLabel";
+            bairroLabel.Size = new System.Drawing.Size(36, 13);
+            bairroLabel.TabIndex = 8;
+            bairroLabel.Text = "bairro:";
+            bairroLabel.UseWaitCursor = true;
+            // 
+            // cidadeLabel
+            // 
+            cidadeLabel.AutoSize = true;
+            cidadeLabel.Location = new System.Drawing.Point(71, 150);
+            cidadeLabel.Name = "cidadeLabel";
+            cidadeLabel.Size = new System.Drawing.Size(42, 13);
+            cidadeLabel.TabIndex = 10;
+            cidadeLabel.Text = "cidade:";
+            cidadeLabel.UseWaitCursor = true;
+            // 
+            // ufLabel
+            // 
+            ufLabel.AutoSize = true;
+            ufLabel.Location = new System.Drawing.Point(71, 176);
+            ufLabel.Name = "ufLabel";
+            ufLabel.Size = new System.Drawing.Size(19, 13);
+            ufLabel.TabIndex = 12;
+            ufLabel.Text = "uf:";
+            ufLabel.UseWaitCursor = true;
+            // 
+            // cepLabel
+            // 
+            cepLabel.AutoSize = true;
+            cepLabel.Location = new System.Drawing.Point(71, 202);
+            cepLabel.Name = "cepLabel";
+            cepLabel.Size = new System.Drawing.Size(28, 13);
+            cepLabel.TabIndex = 14;
+            cepLabel.Text = "cep:";
+            cepLabel.UseWaitCursor = true;
+            // 
+            // foneLabel
+            // 
+            foneLabel.AutoSize = true;
+            foneLabel.Location = new System.Drawing.Point(71, 228);
+            foneLabel.Name = "foneLabel";
+            foneLabel.Size = new System.Drawing.Size(31, 13);
+            foneLabel.TabIndex = 16;
+            foneLabel.Text = "fone:";
+            foneLabel.UseWaitCursor = true;
+            // 
+            // fotoLabel
+            // 
+            fotoLabel.AutoSize = true;
+            fotoLabel.Location = new System.Drawing.Point(71, 254);
+            fotoLabel.Name = "fotoLabel";
+            fotoLabel.Size = new System.Drawing.Size(28, 13);
+            fotoLabel.TabIndex = 18;
+            fotoLabel.Text = "foto:";
+            fotoLabel.UseWaitCursor = true;
+            // 
+            // cpfLabel
+            // 
+            cpfLabel.AutoSize = true;
+            cpfLabel.Location = new System.Drawing.Point(71, 280);
+            cpfLabel.Name = "cpfLabel";
+            cpfLabel.Size = new System.Drawing.Size(25, 13);
+            cpfLabel.TabIndex = 20;
+            cpfLabel.Text = "cpf:";
+            cpfLabel.UseWaitCursor = true;
+            // 
+            // identidadeLabel
+            // 
+            identidadeLabel.AutoSize = true;
+            identidadeLabel.Location = new System.Drawing.Point(71, 306);
+            identidadeLabel.Name = "identidadeLabel";
+            identidadeLabel.Size = new System.Drawing.Size(59, 13);
+            identidadeLabel.TabIndex = 22;
+            identidadeLabel.Text = "identidade:";
+            identidadeLabel.UseWaitCursor = true;
+            // 
+            // serieLabel
+            // 
+            serieLabel.AutoSize = true;
+            serieLabel.Location = new System.Drawing.Point(71, 332);
+            serieLabel.Name = "serieLabel";
+            serieLabel.Size = new System.Drawing.Size(32, 13);
+            serieLabel.TabIndex = 24;
+            serieLabel.Text = "serie:";
+            serieLabel.UseWaitCursor = true;
+            // 
+            // escolaLabel
+            // 
+            escolaLabel.AutoSize = true;
+            escolaLabel.Location = new System.Drawing.Point(71, 358);
+            escolaLabel.Name = "escolaLabel";
+            escolaLabel.Size = new System.Drawing.Size(41, 13);
+            escolaLabel.TabIndex = 26;
+            escolaLabel.Text = "escola:";
+            escolaLabel.UseWaitCursor = true;
+            // 
+            // profissaoLabel
+            // 
+            profissaoLabel.AutoSize = true;
+            profissaoLabel.Location = new System.Drawing.Point(71, 384);
+            profissaoLabel.Name = "profissaoLabel";
+            profissaoLabel.Size = new System.Drawing.Size(52, 13);
+            profissaoLabel.TabIndex = 28;
+            profissaoLabel.Text = "profissao:";
+            profissaoLabel.UseWaitCursor = true;
             // 
             // button2
             // 
@@ -116,6 +266,7 @@
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.UseWaitCursor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -181,6 +332,151 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.UseWaitCursor = true;
             // 
+            // id_locatarioTextBox
+            // 
+            this.id_locatarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "id_locatario", true));
+            this.id_locatarioTextBox.Location = new System.Drawing.Point(138, 17);
+            this.id_locatarioTextBox.Name = "id_locatarioTextBox";
+            this.id_locatarioTextBox.Size = new System.Drawing.Size(200, 20);
+            this.id_locatarioTextBox.TabIndex = 1;
+            this.id_locatarioTextBox.UseWaitCursor = true;
+            // 
+            // locatarioBindingSource
+            // 
+            this.locatarioBindingSource.DataMember = "locatario";
+            this.locatarioBindingSource.DataSource = this.bibliotecaDataSet;
+            // 
+            // bibliotecaDataSet
+            // 
+            this.bibliotecaDataSet.DataSetName = "bibliotecaDataSet";
+            this.bibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nomeTextBox
+            // 
+            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "nome", true));
+            this.nomeTextBox.Location = new System.Drawing.Point(138, 43);
+            this.nomeTextBox.Name = "nomeTextBox";
+            this.nomeTextBox.Size = new System.Drawing.Size(200, 20);
+            this.nomeTextBox.TabIndex = 3;
+            this.nomeTextBox.UseWaitCursor = true;
+            // 
+            // datanascDateTimePicker
+            // 
+            this.datanascDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.locatarioBindingSource, "datanasc", true));
+            this.datanascDateTimePicker.Location = new System.Drawing.Point(138, 69);
+            this.datanascDateTimePicker.Name = "datanascDateTimePicker";
+            this.datanascDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.datanascDateTimePicker.TabIndex = 5;
+            this.datanascDateTimePicker.UseWaitCursor = true;
+            // 
+            // enderecoTextBox
+            // 
+            this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "endereco", true));
+            this.enderecoTextBox.Location = new System.Drawing.Point(138, 95);
+            this.enderecoTextBox.Name = "enderecoTextBox";
+            this.enderecoTextBox.Size = new System.Drawing.Size(200, 20);
+            this.enderecoTextBox.TabIndex = 7;
+            this.enderecoTextBox.UseWaitCursor = true;
+            // 
+            // bairroTextBox
+            // 
+            this.bairroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "bairro", true));
+            this.bairroTextBox.Location = new System.Drawing.Point(138, 121);
+            this.bairroTextBox.Name = "bairroTextBox";
+            this.bairroTextBox.Size = new System.Drawing.Size(200, 20);
+            this.bairroTextBox.TabIndex = 9;
+            this.bairroTextBox.UseWaitCursor = true;
+            // 
+            // cidadeTextBox
+            // 
+            this.cidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "cidade", true));
+            this.cidadeTextBox.Location = new System.Drawing.Point(138, 147);
+            this.cidadeTextBox.Name = "cidadeTextBox";
+            this.cidadeTextBox.Size = new System.Drawing.Size(200, 20);
+            this.cidadeTextBox.TabIndex = 11;
+            this.cidadeTextBox.UseWaitCursor = true;
+            // 
+            // ufTextBox
+            // 
+            this.ufTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "uf", true));
+            this.ufTextBox.Location = new System.Drawing.Point(138, 173);
+            this.ufTextBox.Name = "ufTextBox";
+            this.ufTextBox.Size = new System.Drawing.Size(200, 20);
+            this.ufTextBox.TabIndex = 13;
+            this.ufTextBox.UseWaitCursor = true;
+            // 
+            // cepTextBox
+            // 
+            this.cepTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "cep", true));
+            this.cepTextBox.Location = new System.Drawing.Point(138, 199);
+            this.cepTextBox.Name = "cepTextBox";
+            this.cepTextBox.Size = new System.Drawing.Size(200, 20);
+            this.cepTextBox.TabIndex = 15;
+            this.cepTextBox.UseWaitCursor = true;
+            // 
+            // foneTextBox
+            // 
+            this.foneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "fone", true));
+            this.foneTextBox.Location = new System.Drawing.Point(138, 225);
+            this.foneTextBox.Name = "foneTextBox";
+            this.foneTextBox.Size = new System.Drawing.Size(200, 20);
+            this.foneTextBox.TabIndex = 17;
+            this.foneTextBox.UseWaitCursor = true;
+            // 
+            // fotoTextBox
+            // 
+            this.fotoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "foto", true));
+            this.fotoTextBox.Location = new System.Drawing.Point(138, 251);
+            this.fotoTextBox.Name = "fotoTextBox";
+            this.fotoTextBox.Size = new System.Drawing.Size(200, 20);
+            this.fotoTextBox.TabIndex = 19;
+            this.fotoTextBox.UseWaitCursor = true;
+            // 
+            // cpfTextBox
+            // 
+            this.cpfTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "cpf", true));
+            this.cpfTextBox.Location = new System.Drawing.Point(138, 277);
+            this.cpfTextBox.Name = "cpfTextBox";
+            this.cpfTextBox.Size = new System.Drawing.Size(200, 20);
+            this.cpfTextBox.TabIndex = 21;
+            this.cpfTextBox.UseWaitCursor = true;
+            // 
+            // identidadeTextBox
+            // 
+            this.identidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "identidade", true));
+            this.identidadeTextBox.Location = new System.Drawing.Point(138, 303);
+            this.identidadeTextBox.Name = "identidadeTextBox";
+            this.identidadeTextBox.Size = new System.Drawing.Size(200, 20);
+            this.identidadeTextBox.TabIndex = 23;
+            this.identidadeTextBox.UseWaitCursor = true;
+            // 
+            // serieTextBox
+            // 
+            this.serieTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "serie", true));
+            this.serieTextBox.Location = new System.Drawing.Point(138, 329);
+            this.serieTextBox.Name = "serieTextBox";
+            this.serieTextBox.Size = new System.Drawing.Size(200, 20);
+            this.serieTextBox.TabIndex = 25;
+            this.serieTextBox.UseWaitCursor = true;
+            // 
+            // escolaTextBox
+            // 
+            this.escolaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "escola", true));
+            this.escolaTextBox.Location = new System.Drawing.Point(138, 355);
+            this.escolaTextBox.Name = "escolaTextBox";
+            this.escolaTextBox.Size = new System.Drawing.Size(200, 20);
+            this.escolaTextBox.TabIndex = 27;
+            this.escolaTextBox.UseWaitCursor = true;
+            // 
+            // profissaoTextBox
+            // 
+            this.profissaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "profissao", true));
+            this.profissaoTextBox.Location = new System.Drawing.Point(138, 381);
+            this.profissaoTextBox.Name = "profissaoTextBox";
+            this.profissaoTextBox.Size = new System.Drawing.Size(200, 20);
+            this.profissaoTextBox.TabIndex = 29;
+            this.profissaoTextBox.UseWaitCursor = true;
+            // 
             // tabPage2
             // 
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -202,16 +498,6 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.UseWaitCursor = true;
-            // 
-            // bibliotecaDataSet
-            // 
-            this.bibliotecaDataSet.DataSetName = "bibliotecaDataSet";
-            this.bibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // locatarioBindingSource
-            // 
-            this.locatarioBindingSource.DataMember = "locatario";
-            this.locatarioBindingSource.DataSource = this.bibliotecaDataSet;
             // 
             // locatarioTableAdapter
             // 
@@ -258,6 +544,32 @@
             this.locatarioBindingNavigator.Size = new System.Drawing.Size(669, 25);
             this.locatarioBindingNavigator.TabIndex = 8;
             this.locatarioBindingNavigator.Text = "bindingNavigator1";
+            this.locatarioBindingNavigator.UseWaitCursor = true;
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Excluir";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -291,17 +603,10 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 15);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -309,7 +614,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
             // 
             // bindingNavigatorMoveLastItem
@@ -318,295 +623,22 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Mover último";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Excluir";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // locatarioBindingNavigatorSaveItem
             // 
             this.locatarioBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.locatarioBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("locatarioBindingNavigatorSaveItem.Image")));
             this.locatarioBindingNavigatorSaveItem.Name = "locatarioBindingNavigatorSaveItem";
-            this.locatarioBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.locatarioBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.locatarioBindingNavigatorSaveItem.Text = "Salvar Dados";
             this.locatarioBindingNavigatorSaveItem.Click += new System.EventHandler(this.locatarioBindingNavigatorSaveItem_Click);
-            // 
-            // id_locatarioLabel
-            // 
-            id_locatarioLabel.AutoSize = true;
-            id_locatarioLabel.Location = new System.Drawing.Point(71, 20);
-            id_locatarioLabel.Name = "id_locatarioLabel";
-            id_locatarioLabel.Size = new System.Drawing.Size(61, 13);
-            id_locatarioLabel.TabIndex = 0;
-            id_locatarioLabel.Text = "id locatario:";
-            // 
-            // id_locatarioTextBox
-            // 
-            this.id_locatarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "id_locatario", true));
-            this.id_locatarioTextBox.Location = new System.Drawing.Point(138, 17);
-            this.id_locatarioTextBox.Name = "id_locatarioTextBox";
-            this.id_locatarioTextBox.Size = new System.Drawing.Size(200, 20);
-            this.id_locatarioTextBox.TabIndex = 1;
-            // 
-            // nomeLabel
-            // 
-            nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(71, 46);
-            nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(36, 13);
-            nomeLabel.TabIndex = 2;
-            nomeLabel.Text = "nome:";
-            // 
-            // nomeTextBox
-            // 
-            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(138, 43);
-            this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(200, 20);
-            this.nomeTextBox.TabIndex = 3;
-            // 
-            // datanascLabel
-            // 
-            datanascLabel.AutoSize = true;
-            datanascLabel.Location = new System.Drawing.Point(71, 73);
-            datanascLabel.Name = "datanascLabel";
-            datanascLabel.Size = new System.Drawing.Size(54, 13);
-            datanascLabel.TabIndex = 4;
-            datanascLabel.Text = "datanasc:";
-            // 
-            // datanascDateTimePicker
-            // 
-            this.datanascDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.locatarioBindingSource, "datanasc", true));
-            this.datanascDateTimePicker.Location = new System.Drawing.Point(138, 69);
-            this.datanascDateTimePicker.Name = "datanascDateTimePicker";
-            this.datanascDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.datanascDateTimePicker.TabIndex = 5;
-            // 
-            // enderecoLabel
-            // 
-            enderecoLabel.AutoSize = true;
-            enderecoLabel.Location = new System.Drawing.Point(71, 98);
-            enderecoLabel.Name = "enderecoLabel";
-            enderecoLabel.Size = new System.Drawing.Size(55, 13);
-            enderecoLabel.TabIndex = 6;
-            enderecoLabel.Text = "endereco:";
-            // 
-            // enderecoTextBox
-            // 
-            this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "endereco", true));
-            this.enderecoTextBox.Location = new System.Drawing.Point(138, 95);
-            this.enderecoTextBox.Name = "enderecoTextBox";
-            this.enderecoTextBox.Size = new System.Drawing.Size(200, 20);
-            this.enderecoTextBox.TabIndex = 7;
-            // 
-            // bairroLabel
-            // 
-            bairroLabel.AutoSize = true;
-            bairroLabel.Location = new System.Drawing.Point(71, 124);
-            bairroLabel.Name = "bairroLabel";
-            bairroLabel.Size = new System.Drawing.Size(36, 13);
-            bairroLabel.TabIndex = 8;
-            bairroLabel.Text = "bairro:";
-            // 
-            // bairroTextBox
-            // 
-            this.bairroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "bairro", true));
-            this.bairroTextBox.Location = new System.Drawing.Point(138, 121);
-            this.bairroTextBox.Name = "bairroTextBox";
-            this.bairroTextBox.Size = new System.Drawing.Size(200, 20);
-            this.bairroTextBox.TabIndex = 9;
-            // 
-            // cidadeLabel
-            // 
-            cidadeLabel.AutoSize = true;
-            cidadeLabel.Location = new System.Drawing.Point(71, 150);
-            cidadeLabel.Name = "cidadeLabel";
-            cidadeLabel.Size = new System.Drawing.Size(42, 13);
-            cidadeLabel.TabIndex = 10;
-            cidadeLabel.Text = "cidade:";
-            // 
-            // cidadeTextBox
-            // 
-            this.cidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "cidade", true));
-            this.cidadeTextBox.Location = new System.Drawing.Point(138, 147);
-            this.cidadeTextBox.Name = "cidadeTextBox";
-            this.cidadeTextBox.Size = new System.Drawing.Size(200, 20);
-            this.cidadeTextBox.TabIndex = 11;
-            // 
-            // ufLabel
-            // 
-            ufLabel.AutoSize = true;
-            ufLabel.Location = new System.Drawing.Point(71, 176);
-            ufLabel.Name = "ufLabel";
-            ufLabel.Size = new System.Drawing.Size(19, 13);
-            ufLabel.TabIndex = 12;
-            ufLabel.Text = "uf:";
-            // 
-            // ufTextBox
-            // 
-            this.ufTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "uf", true));
-            this.ufTextBox.Location = new System.Drawing.Point(138, 173);
-            this.ufTextBox.Name = "ufTextBox";
-            this.ufTextBox.Size = new System.Drawing.Size(200, 20);
-            this.ufTextBox.TabIndex = 13;
-            // 
-            // cepLabel
-            // 
-            cepLabel.AutoSize = true;
-            cepLabel.Location = new System.Drawing.Point(71, 202);
-            cepLabel.Name = "cepLabel";
-            cepLabel.Size = new System.Drawing.Size(28, 13);
-            cepLabel.TabIndex = 14;
-            cepLabel.Text = "cep:";
-            // 
-            // cepTextBox
-            // 
-            this.cepTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "cep", true));
-            this.cepTextBox.Location = new System.Drawing.Point(138, 199);
-            this.cepTextBox.Name = "cepTextBox";
-            this.cepTextBox.Size = new System.Drawing.Size(200, 20);
-            this.cepTextBox.TabIndex = 15;
-            // 
-            // foneLabel
-            // 
-            foneLabel.AutoSize = true;
-            foneLabel.Location = new System.Drawing.Point(71, 228);
-            foneLabel.Name = "foneLabel";
-            foneLabel.Size = new System.Drawing.Size(31, 13);
-            foneLabel.TabIndex = 16;
-            foneLabel.Text = "fone:";
-            // 
-            // foneTextBox
-            // 
-            this.foneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "fone", true));
-            this.foneTextBox.Location = new System.Drawing.Point(138, 225);
-            this.foneTextBox.Name = "foneTextBox";
-            this.foneTextBox.Size = new System.Drawing.Size(200, 20);
-            this.foneTextBox.TabIndex = 17;
-            // 
-            // fotoLabel
-            // 
-            fotoLabel.AutoSize = true;
-            fotoLabel.Location = new System.Drawing.Point(71, 254);
-            fotoLabel.Name = "fotoLabel";
-            fotoLabel.Size = new System.Drawing.Size(28, 13);
-            fotoLabel.TabIndex = 18;
-            fotoLabel.Text = "foto:";
-            // 
-            // fotoTextBox
-            // 
-            this.fotoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "foto", true));
-            this.fotoTextBox.Location = new System.Drawing.Point(138, 251);
-            this.fotoTextBox.Name = "fotoTextBox";
-            this.fotoTextBox.Size = new System.Drawing.Size(200, 20);
-            this.fotoTextBox.TabIndex = 19;
-            // 
-            // cpfLabel
-            // 
-            cpfLabel.AutoSize = true;
-            cpfLabel.Location = new System.Drawing.Point(71, 280);
-            cpfLabel.Name = "cpfLabel";
-            cpfLabel.Size = new System.Drawing.Size(25, 13);
-            cpfLabel.TabIndex = 20;
-            cpfLabel.Text = "cpf:";
-            // 
-            // cpfTextBox
-            // 
-            this.cpfTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "cpf", true));
-            this.cpfTextBox.Location = new System.Drawing.Point(138, 277);
-            this.cpfTextBox.Name = "cpfTextBox";
-            this.cpfTextBox.Size = new System.Drawing.Size(200, 20);
-            this.cpfTextBox.TabIndex = 21;
-            // 
-            // identidadeLabel
-            // 
-            identidadeLabel.AutoSize = true;
-            identidadeLabel.Location = new System.Drawing.Point(71, 306);
-            identidadeLabel.Name = "identidadeLabel";
-            identidadeLabel.Size = new System.Drawing.Size(59, 13);
-            identidadeLabel.TabIndex = 22;
-            identidadeLabel.Text = "identidade:";
-            // 
-            // identidadeTextBox
-            // 
-            this.identidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "identidade", true));
-            this.identidadeTextBox.Location = new System.Drawing.Point(138, 303);
-            this.identidadeTextBox.Name = "identidadeTextBox";
-            this.identidadeTextBox.Size = new System.Drawing.Size(200, 20);
-            this.identidadeTextBox.TabIndex = 23;
-            // 
-            // serieLabel
-            // 
-            serieLabel.AutoSize = true;
-            serieLabel.Location = new System.Drawing.Point(71, 332);
-            serieLabel.Name = "serieLabel";
-            serieLabel.Size = new System.Drawing.Size(32, 13);
-            serieLabel.TabIndex = 24;
-            serieLabel.Text = "serie:";
-            // 
-            // serieTextBox
-            // 
-            this.serieTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "serie", true));
-            this.serieTextBox.Location = new System.Drawing.Point(138, 329);
-            this.serieTextBox.Name = "serieTextBox";
-            this.serieTextBox.Size = new System.Drawing.Size(200, 20);
-            this.serieTextBox.TabIndex = 25;
-            // 
-            // escolaLabel
-            // 
-            escolaLabel.AutoSize = true;
-            escolaLabel.Location = new System.Drawing.Point(71, 358);
-            escolaLabel.Name = "escolaLabel";
-            escolaLabel.Size = new System.Drawing.Size(41, 13);
-            escolaLabel.TabIndex = 26;
-            escolaLabel.Text = "escola:";
-            // 
-            // escolaTextBox
-            // 
-            this.escolaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "escola", true));
-            this.escolaTextBox.Location = new System.Drawing.Point(138, 355);
-            this.escolaTextBox.Name = "escolaTextBox";
-            this.escolaTextBox.Size = new System.Drawing.Size(200, 20);
-            this.escolaTextBox.TabIndex = 27;
-            // 
-            // profissaoLabel
-            // 
-            profissaoLabel.AutoSize = true;
-            profissaoLabel.Location = new System.Drawing.Point(71, 384);
-            profissaoLabel.Name = "profissaoLabel";
-            profissaoLabel.Size = new System.Drawing.Size(52, 13);
-            profissaoLabel.TabIndex = 28;
-            profissaoLabel.Text = "profissao:";
-            // 
-            // profissaoTextBox
-            // 
-            this.profissaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "profissao", true));
-            this.profissaoTextBox.Location = new System.Drawing.Point(138, 381);
-            this.profissaoTextBox.Name = "profissaoTextBox";
-            this.profissaoTextBox.Size = new System.Drawing.Size(200, 20);
-            this.profissaoTextBox.TabIndex = 29;
             // 
             // Frm_cadLocatario
             // 
@@ -630,9 +662,9 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.locatarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.locatarioBindingNavigator)).EndInit();
             this.locatarioBindingNavigator.ResumeLayout(false);
             this.locatarioBindingNavigator.PerformLayout();

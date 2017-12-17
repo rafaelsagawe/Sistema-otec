@@ -31,5 +31,10 @@ namespace Sistema_otec
             this.locatarioTableAdapter.Fill(this.bibliotecaDataSet.locatario);
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

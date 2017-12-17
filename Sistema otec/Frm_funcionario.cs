@@ -31,5 +31,10 @@ namespace Sistema_otec
             this.tableAdapterManager.UpdateAll(this.bibliotecaDataSet);
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

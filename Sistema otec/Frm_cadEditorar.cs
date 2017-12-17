@@ -19,13 +19,55 @@ namespace Sistema_otec
 
         private void Frm_cadEditorar_Load(object sender, EventArgs e)
         {
-           
+            // TODO: esta linha de código carrega dados na tabela 'bibliotecaDataSet.editora'. Você pode movê-la ou removê-la conforme necessário.
+            this.editoraTableAdapter.Fill(this.bibliotecaDataSet.editora);
+
 
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void editoraBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void editoraBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Validate();
+                this.editoraBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.bibliotecaDataSet);
+                MessageBox.Show("Registro salvo com sucesso", "Informa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao salvar o registro", "informa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja excluir o registro?", "Pergunta", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Validate();
+                this.editoraBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.bibliotecaDataSet);
+            }
+            else
+            {
+                this.editoraTableAdapter.Fill(this.bibliotecaDataSet.editora);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }
