@@ -19,6 +19,16 @@ namespace Sistema_otec
 
         private void Frm_funcionario_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'bibliotecaDataSet.funcionario'. Você pode movê-la ou removê-la conforme necessário.
+            this.funcionarioTableAdapter.Fill(this.bibliotecaDataSet.funcionario);
+
+        }
+
+        private void funcionarioBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.funcionarioBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.bibliotecaDataSet);
 
         }
     }

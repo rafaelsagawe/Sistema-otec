@@ -16,5 +16,20 @@ namespace Sistema_otec
         {
             InitializeComponent();
         }
+
+        private void locatarioBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.locatarioBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.bibliotecaDataSet);
+
+        }
+
+        private void Frm_cadLocatario_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'bibliotecaDataSet.locatario'. Você pode movê-la ou removê-la conforme necessário.
+            this.locatarioTableAdapter.Fill(this.bibliotecaDataSet.locatario);
+
+        }
     }
 }
