@@ -74,5 +74,10 @@ namespace Sistema_otec
         {
             this.editoraTableAdapter.FillByEditoraNome(bibliotecaDataSet.editora, textBox1.Text);
         }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

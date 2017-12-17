@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -37,10 +38,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Btn_cancel = new System.Windows.Forms.Button();
             this.Btn_ok = new System.Windows.Forms.Button();
+            this.bibliotecaDataSet = new Sistema_otec.bibliotecaDataSet();
+            this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.funcionarioTableAdapter = new Sistema_otec.bibliotecaDataSetTableAdapters.funcionarioTableAdapter();
+            this.tableAdapterManager = new Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -54,7 +61,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(573, 261);
+            this.panel1.Size = new System.Drawing.Size(604, 279);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -129,16 +136,43 @@
             this.Btn_ok.UseVisualStyleBackColor = true;
             this.Btn_ok.Click += new System.EventHandler(this.button1_Click);
             // 
+            // bibliotecaDataSet
+            // 
+            this.bibliotecaDataSet.DataSetName = "bibliotecaDataSet";
+            this.bibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // funcionarioBindingSource
+            // 
+            this.funcionarioBindingSource.DataMember = "funcionario";
+            this.funcionarioBindingSource.DataSource = this.bibliotecaDataSet;
+            // 
+            // funcionarioTableAdapter
+            // 
+            this.funcionarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.editoraTableAdapter = null;
+            this.tableAdapterManager.funcionarioTableAdapter = this.funcionarioTableAdapter;
+            this.tableAdapterManager.itemLocacaoTableAdapter = null;
+            this.tableAdapterManager.livrosTableAdapter = null;
+            this.tableAdapterManager.locacaoTableAdapter = null;
+            this.tableAdapterManager.locatarioTableAdapter = null;
+            this.tableAdapterManager.perfilTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // Frm_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(573, 261);
+            this.ClientSize = new System.Drawing.Size(604, 279);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_login";
+            this.Load += new System.EventHandler(this.Frm_login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -146,6 +180,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -161,5 +197,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private bibliotecaDataSet bibliotecaDataSet;
+        private System.Windows.Forms.BindingSource funcionarioBindingSource;
+        private bibliotecaDataSetTableAdapters.funcionarioTableAdapter funcionarioTableAdapter;
+        private bibliotecaDataSetTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }
