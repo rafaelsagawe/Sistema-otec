@@ -19,20 +19,11 @@ namespace Sistema_otec
 
         private void Frm_cadEditorar_Load(object sender, EventArgs e)
         {
+           
 
         }
 
-        private void editoraBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void editoraBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void editoraBindingNavigatorSaveItem_Click_2(object sender, EventArgs e)
+        private void tabPage1_Click(object sender, EventArgs e)
         {
 
         }
