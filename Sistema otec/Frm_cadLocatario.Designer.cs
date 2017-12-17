@@ -337,6 +337,7 @@
             this.id_locatarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "id_locatario", true));
             this.id_locatarioTextBox.Location = new System.Drawing.Point(138, 17);
             this.id_locatarioTextBox.Name = "id_locatarioTextBox";
+            this.id_locatarioTextBox.ReadOnly = true;
             this.id_locatarioTextBox.Size = new System.Drawing.Size(200, 20);
             this.id_locatarioTextBox.TabIndex = 1;
             this.id_locatarioTextBox.UseWaitCursor = true;

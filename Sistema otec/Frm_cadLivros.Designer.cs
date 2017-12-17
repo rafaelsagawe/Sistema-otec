@@ -42,15 +42,28 @@
             System.Windows.Forms.Label tomboLabel;
             System.Windows.Forms.Label resenhaLabel;
             System.Windows.Forms.Label autoresLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_cadLivros));
             System.Windows.Forms.Label capaLabel;
             System.Windows.Forms.Label comentariosLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_cadLivros));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.id_livroTextBox = new System.Windows.Forms.TextBox();
+            this.livrosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.livrosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibliotecaDataSet = new Sistema_otec.bibliotecaDataSet();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.livrosBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.id_livroTextBox = new System.Windows.Forms.TextBox();
             this.id_editoraTextBox = new System.Windows.Forms.TextBox();
             this.titularTextBox = new System.Windows.Forms.TextBox();
             this.edicaoTextBox = new System.Windows.Forms.TextBox();
@@ -64,30 +77,17 @@
             this.resenhaTextBox = new System.Windows.Forms.TextBox();
             this.autoresTextBox = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.comentariosTextBox = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.capaTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.livrosTableAdapter = new Sistema_otec.bibliotecaDataSetTableAdapters.livrosTableAdapter();
             this.tableAdapterManager = new Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager();
-            this.livrosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.livrosBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.capaTextBox = new System.Windows.Forms.TextBox();
-            this.comentariosTextBox = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             id_livroLabel = new System.Windows.Forms.Label();
             id_editoraLabel = new System.Windows.Forms.Label();
             titularLabel = new System.Windows.Forms.Label();
@@ -106,14 +106,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.livrosBindingNavigator)).BeginInit();
+            this.livrosBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.livrosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.livrosBindingNavigator)).BeginInit();
-            this.livrosBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // id_livroLabel
@@ -233,6 +233,24 @@
             autoresLabel.TabIndex = 26;
             autoresLabel.Text = "autores:";
             // 
+            // capaLabel
+            // 
+            capaLabel.AutoSize = true;
+            capaLabel.Location = new System.Drawing.Point(6, 329);
+            capaLabel.Name = "capaLabel";
+            capaLabel.Size = new System.Drawing.Size(34, 13);
+            capaLabel.TabIndex = 24;
+            capaLabel.Text = "capa:";
+            // 
+            // comentariosLabel
+            // 
+            comentariosLabel.AutoSize = true;
+            comentariosLabel.Location = new System.Drawing.Point(6, 3);
+            comentariosLabel.Name = "comentariosLabel";
+            comentariosLabel.Size = new System.Drawing.Size(67, 13);
+            comentariosLabel.TabIndex = 30;
+            comentariosLabel.Text = "comentarios:";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -292,14 +310,45 @@
             this.tabPage1.Text = "Dados Gerais";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // id_livroTextBox
+            // livrosBindingNavigator
             // 
-            this.id_livroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.livrosBindingSource, "id_livro", true));
-            this.id_livroTextBox.Location = new System.Drawing.Point(83, 41);
-            this.id_livroTextBox.Name = "id_livroTextBox";
-            this.id_livroTextBox.ReadOnly = true;
-            this.id_livroTextBox.Size = new System.Drawing.Size(165, 20);
-            this.id_livroTextBox.TabIndex = 1;
+            this.livrosBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.livrosBindingNavigator.BindingSource = this.livrosBindingSource;
+            this.livrosBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.livrosBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.livrosBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.livrosBindingNavigatorSaveItem});
+            this.livrosBindingNavigator.Location = new System.Drawing.Point(3, 3);
+            this.livrosBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.livrosBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.livrosBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.livrosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.livrosBindingNavigator.Name = "livrosBindingNavigator";
+            this.livrosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.livrosBindingNavigator.Size = new System.Drawing.Size(575, 25);
+            this.livrosBindingNavigator.TabIndex = 30;
+            this.livrosBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // livrosBindingSource
             // 
@@ -310,6 +359,101 @@
             // 
             this.bibliotecaDataSet.DataSetName = "bibliotecaDataSet";
             this.bibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Excluir";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Posição";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Mover último";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // livrosBindingNavigatorSaveItem
+            // 
+            this.livrosBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.livrosBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("livrosBindingNavigatorSaveItem.Image")));
+            this.livrosBindingNavigatorSaveItem.Name = "livrosBindingNavigatorSaveItem";
+            this.livrosBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.livrosBindingNavigatorSaveItem.Text = "Salvar Dados";
+            this.livrosBindingNavigatorSaveItem.Click += new System.EventHandler(this.livrosBindingNavigatorSaveItem_Click_2);
+            // 
+            // id_livroTextBox
+            // 
+            this.id_livroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.livrosBindingSource, "id_livro", true));
+            this.id_livroTextBox.Location = new System.Drawing.Point(83, 41);
+            this.id_livroTextBox.Name = "id_livroTextBox";
+            this.id_livroTextBox.ReadOnly = true;
+            this.id_livroTextBox.Size = new System.Drawing.Size(165, 20);
+            this.id_livroTextBox.TabIndex = 1;
             // 
             // id_editoraTextBox
             // 
@@ -424,6 +568,15 @@
             this.tabPage2.Text = "Comentario";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // comentariosTextBox
+            // 
+            this.comentariosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.livrosBindingSource, "comentarios", true));
+            this.comentariosTextBox.Location = new System.Drawing.Point(6, 19);
+            this.comentariosTextBox.Multiline = true;
+            this.comentariosTextBox.Name = "comentariosTextBox";
+            this.comentariosTextBox.Size = new System.Drawing.Size(569, 323);
+            this.comentariosTextBox.TabIndex = 31;
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.toolStrip1);
@@ -437,6 +590,51 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Imagem da Capa";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 3);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(577, 25);
+            this.toolStrip1.TabIndex = 27;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "toolStripButton2";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(46, 31);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(531, 289);
+            this.pictureBox2.TabIndex = 26;
+            this.pictureBox2.TabStop = false;
+            // 
+            // capaTextBox
+            // 
+            this.capaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.livrosBindingSource, "capa", true));
+            this.capaTextBox.Location = new System.Drawing.Point(46, 326);
+            this.capaTextBox.Name = "capaTextBox";
+            this.capaTextBox.Size = new System.Drawing.Size(531, 20);
+            this.capaTextBox.TabIndex = 25;
             // 
             // button1
             // 
@@ -473,203 +671,6 @@
             this.tableAdapterManager.perfilTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // livrosBindingNavigator
-            // 
-            this.livrosBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.livrosBindingNavigator.BindingSource = this.livrosBindingSource;
-            this.livrosBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.livrosBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.livrosBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.livrosBindingNavigatorSaveItem});
-            this.livrosBindingNavigator.Location = new System.Drawing.Point(3, 3);
-            this.livrosBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.livrosBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.livrosBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.livrosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.livrosBindingNavigator.Name = "livrosBindingNavigator";
-            this.livrosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.livrosBindingNavigator.Size = new System.Drawing.Size(575, 25);
-            this.livrosBindingNavigator.TabIndex = 30;
-            this.livrosBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Excluir";
-            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Posição";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // livrosBindingNavigatorSaveItem
-            // 
-            this.livrosBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.livrosBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("livrosBindingNavigatorSaveItem.Image")));
-            this.livrosBindingNavigatorSaveItem.Name = "livrosBindingNavigatorSaveItem";
-            this.livrosBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.livrosBindingNavigatorSaveItem.Text = "Salvar Dados";
-            this.livrosBindingNavigatorSaveItem.Click += new System.EventHandler(this.livrosBindingNavigatorSaveItem_Click_2);
-            // 
-            // capaLabel
-            // 
-            capaLabel.AutoSize = true;
-            capaLabel.Location = new System.Drawing.Point(6, 329);
-            capaLabel.Name = "capaLabel";
-            capaLabel.Size = new System.Drawing.Size(34, 13);
-            capaLabel.TabIndex = 24;
-            capaLabel.Text = "capa:";
-            // 
-            // capaTextBox
-            // 
-            this.capaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.livrosBindingSource, "capa", true));
-            this.capaTextBox.Location = new System.Drawing.Point(46, 326);
-            this.capaTextBox.Name = "capaTextBox";
-            this.capaTextBox.Size = new System.Drawing.Size(531, 20);
-            this.capaTextBox.TabIndex = 25;
-            // 
-            // comentariosLabel
-            // 
-            comentariosLabel.AutoSize = true;
-            comentariosLabel.Location = new System.Drawing.Point(6, 3);
-            comentariosLabel.Name = "comentariosLabel";
-            comentariosLabel.Size = new System.Drawing.Size(67, 13);
-            comentariosLabel.TabIndex = 30;
-            comentariosLabel.Text = "comentarios:";
-            // 
-            // comentariosTextBox
-            // 
-            this.comentariosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.livrosBindingSource, "comentarios", true));
-            this.comentariosTextBox.Location = new System.Drawing.Point(6, 19);
-            this.comentariosTextBox.Multiline = true;
-            this.comentariosTextBox.Name = "comentariosTextBox";
-            this.comentariosTextBox.Size = new System.Drawing.Size(569, 323);
-            this.comentariosTextBox.TabIndex = 31;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(46, 31);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(531, 289);
-            this.pictureBox2.TabIndex = 26;
-            this.pictureBox2.TabStop = false;
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 3);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(577, 25);
-            this.toolStrip1.TabIndex = 27;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "toolStripButton2";
-            // 
             // Frm_cadLivros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -691,18 +692,18 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.livrosBindingNavigator)).EndInit();
+            this.livrosBindingNavigator.ResumeLayout(false);
+            this.livrosBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.livrosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.livrosBindingNavigator)).EndInit();
-            this.livrosBindingNavigator.ResumeLayout(false);
-            this.livrosBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

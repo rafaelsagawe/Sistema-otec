@@ -44,10 +44,12 @@ namespace Sistema_otec
                 this.editoraBindingSource.EndEdit();
                 this.tableAdapterManager.UpdateAll(this.bibliotecaDataSet);
                 MessageBox.Show("Registro salvo com sucesso", "Informa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.editoraTableAdapter.Fill(this.bibliotecaDataSet.editora);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Falha ao salvar o registro", "informa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.editoraTableAdapter.Fill(this.bibliotecaDataSet.editora);
             }
         }
 
@@ -58,9 +60,11 @@ namespace Sistema_otec
                 this.Validate();
                 this.editoraBindingSource.EndEdit();
                 this.tableAdapterManager.UpdateAll(this.bibliotecaDataSet);
+                MessageBox.Show("Registro deletado", "informa", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
+                MessageBox.Show("Registro mantido", "informa", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.editoraTableAdapter.Fill(this.bibliotecaDataSet.editora);
             }
         }

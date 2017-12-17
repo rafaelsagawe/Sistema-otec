@@ -389,6 +389,7 @@
             this.id_editoraTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editoraBindingSource, "id_editora", true));
             this.id_editoraTextBox.Location = new System.Drawing.Point(86, 63);
             this.id_editoraTextBox.Name = "id_editoraTextBox";
+            this.id_editoraTextBox.ReadOnly = true;
             this.id_editoraTextBox.Size = new System.Drawing.Size(100, 20);
             this.id_editoraTextBox.TabIndex = 1;
             // 
