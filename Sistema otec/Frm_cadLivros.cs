@@ -36,9 +36,7 @@ namespace Sistema_otec
 
         private void livrosBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
         {
-            this.Validate();
-            this.livrosBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.bibliotecaDataSet);
+
 
         }
 
@@ -46,5 +44,44 @@ namespace Sistema_otec
         {
             this.Dispose();
         }
+
+        private void livrosBindingNavigatorSaveItem_Click_2(object sender, EventArgs e)
+        {
+            {
+                try
+                {
+                    this.Validate();
+                    this.livrosBindingSource.EndEdit();
+                    this.tableAdapterManager.UpdateAll(this.bibliotecaDataSet);
+                    MessageBox.Show("Registro salvo com sucesso", "Informa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Falha ao salvar o registro", "informa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
     }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja excluir o registro?", "Pergunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Validate();
+                this.livrosBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.bibliotecaDataSet);
+                MessageBox.Show("Registro deletado", "informa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.livrosTableAdapter.Fill(this.bibliotecaDataSet.livros);
+
+            }
+            else
+            {
+                MessageBox.Show("Registro mantido", "informa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.livrosTableAdapter.Fill(this.bibliotecaDataSet.livros);
+
+            }
+        }
+    }
+       
+       
 }
+            
