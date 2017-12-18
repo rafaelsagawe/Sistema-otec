@@ -64,7 +64,6 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.livrosBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.id_livroTextBox = new System.Windows.Forms.TextBox();
-            this.id_editoraTextBox = new System.Windows.Forms.TextBox();
             this.titularTextBox = new System.Windows.Forms.TextBox();
             this.edicaoTextBox = new System.Windows.Forms.TextBox();
             this.anoTextBox = new System.Windows.Forms.TextBox();
@@ -88,6 +87,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.livrosTableAdapter = new Sistema_otec.bibliotecaDataSetTableAdapters.livrosTableAdapter();
             this.tableAdapterManager = new Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.bibliotecaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.editoraBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.editoraTableAdapter = new Sistema_otec.bibliotecaDataSetTableAdapters.editoraTableAdapter();
             id_livroLabel = new System.Windows.Forms.Label();
             id_editoraLabel = new System.Windows.Forms.Label();
             titularLabel = new System.Windows.Forms.Label();
@@ -114,6 +117,8 @@
             this.tabPage3.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editoraBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // id_livroLabel
@@ -275,11 +280,11 @@
             // 
             this.tabPage1.AutoScroll = true;
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Controls.Add(this.livrosBindingNavigator);
             this.tabPage1.Controls.Add(id_livroLabel);
             this.tabPage1.Controls.Add(this.id_livroTextBox);
             this.tabPage1.Controls.Add(id_editoraLabel);
-            this.tabPage1.Controls.Add(this.id_editoraTextBox);
             this.tabPage1.Controls.Add(titularLabel);
             this.tabPage1.Controls.Add(this.titularTextBox);
             this.tabPage1.Controls.Add(edicaoLabel);
@@ -454,15 +459,6 @@
             this.id_livroTextBox.ReadOnly = true;
             this.id_livroTextBox.Size = new System.Drawing.Size(165, 20);
             this.id_livroTextBox.TabIndex = 1;
-            // 
-            // id_editoraTextBox
-            // 
-            this.id_editoraTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.livrosBindingSource, "id_editora", true));
-            this.id_editoraTextBox.Location = new System.Drawing.Point(83, 67);
-            this.id_editoraTextBox.Name = "id_editoraTextBox";
-            this.id_editoraTextBox.ReadOnly = true;
-            this.id_editoraTextBox.Size = new System.Drawing.Size(165, 20);
-            this.id_editoraTextBox.TabIndex = 3;
             // 
             // titularTextBox
             // 
@@ -671,6 +667,32 @@
             this.tableAdapterManager.perfilTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.livrosBindingSource, "id_editora", true));
+            this.comboBox1.DataSource = this.editoraBindingSource;
+            this.comboBox1.DisplayMember = "nome";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(83, 66);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(165, 21);
+            this.comboBox1.TabIndex = 31;
+            this.comboBox1.ValueMember = "id_editora";
+            // 
+            // bibliotecaDataSetBindingSource
+            // 
+            this.bibliotecaDataSetBindingSource.DataSource = this.bibliotecaDataSet;
+            this.bibliotecaDataSetBindingSource.Position = 0;
+            // 
+            // editoraBindingSource
+            // 
+            this.editoraBindingSource.DataMember = "editora";
+            this.editoraBindingSource.DataSource = this.bibliotecaDataSetBindingSource;
+            // 
+            // editoraTableAdapter
+            // 
+            this.editoraTableAdapter.ClearBeforeFill = true;
+            // 
             // Frm_cadLivros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -704,6 +726,8 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editoraBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -722,7 +746,6 @@
         private bibliotecaDataSetTableAdapters.livrosTableAdapter livrosTableAdapter;
         private bibliotecaDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox id_livroTextBox;
-        private System.Windows.Forms.TextBox id_editoraTextBox;
         private System.Windows.Forms.TextBox titularTextBox;
         private System.Windows.Forms.TextBox edicaoTextBox;
         private System.Windows.Forms.TextBox anoTextBox;
@@ -753,5 +776,9 @@
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox capaTextBox;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.BindingSource bibliotecaDataSetBindingSource;
+        private System.Windows.Forms.BindingSource editoraBindingSource;
+        private bibliotecaDataSetTableAdapters.editoraTableAdapter editoraTableAdapter;
     }
 }

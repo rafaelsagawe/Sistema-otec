@@ -27,6 +27,8 @@ namespace Sistema_otec
 
         private void Frm_cadLivros_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'bibliotecaDataSet.editora'. Você pode movê-la ou removê-la conforme necessário.
+            this.editoraTableAdapter.Fill(this.bibliotecaDataSet.editora);
             // TODO: esta linha de código carrega dados na tabela 'bibliotecaDataSet.livros'. Você pode movê-la ou removê-la conforme necessário.
             this.livrosTableAdapter.Fill(this.bibliotecaDataSet.livros);
             // TODO: esta linha de código carrega dados na tabela 'bibliotecaDataSet.livros'. Você pode movê-la ou removê-la conforme necessário.
