@@ -26,15 +26,55 @@ namespace Sistema_otec
 
         private void funcionarioBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.funcionarioBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.bibliotecaDataSet);
+
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void situacaoCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void funcionarioBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.funcionarioBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.bibliotecaDataSet);
+            MessageBox.Show("Registro salvo", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.funcionarioTableAdapter.Fill(this.bibliotecaDataSet.funcionario);
+            this.funcionarioBindingSource.MoveLast();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja excluir?", "Questionario", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Validate();
+                this.funcionarioBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.bibliotecaDataSet);
+                MessageBox.Show("Registro excluido", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Operação abortada", "Abortada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.funcionarioTableAdapter.Fill(this.bibliotecaDataSet.funcionario);
+
+            }
         }
     }
 }

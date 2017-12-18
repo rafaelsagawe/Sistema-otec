@@ -35,23 +35,24 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Btn_cancel = new System.Windows.Forms.Button();
             this.Btn_ok = new System.Windows.Forms.Button();
             this.bibliotecaDataSet = new Sistema_otec.bibliotecaDataSet();
             this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.funcionarioTableAdapter = new Sistema_otec.bibliotecaDataSetTableAdapters.funcionarioTableAdapter();
             this.tableAdapterManager = new Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
@@ -61,22 +62,24 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(604, 279);
+            this.panel1.Size = new System.Drawing.Size(532, 230);
             this.panel1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(376, 32);
+            this.label1.BackColor = System.Drawing.SystemColors.Window;
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(254, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 13);
+            this.label1.Size = new System.Drawing.Size(257, 45);
             this.label1.TabIndex = 5;
             this.label1.Text = "Controle de acesso";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Location = new System.Drawing.Point(283, 109);
+            this.groupBox2.Location = new System.Drawing.Point(240, 87);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(280, 49);
             this.groupBox2.TabIndex = 1;
@@ -93,7 +96,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(283, 163);
+            this.groupBox1.Location = new System.Drawing.Point(240, 141);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(280, 49);
             this.groupBox1.TabIndex = 2;
@@ -108,17 +111,9 @@
             this.textBox1.Size = new System.Drawing.Size(265, 20);
             this.textBox1.TabIndex = 2;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(265, 255);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // Btn_cancel
             // 
-            this.Btn_cancel.Location = new System.Drawing.Point(488, 217);
+            this.Btn_cancel.Location = new System.Drawing.Point(445, 195);
             this.Btn_cancel.Name = "Btn_cancel";
             this.Btn_cancel.Size = new System.Drawing.Size(75, 24);
             this.Btn_cancel.TabIndex = 4;
@@ -128,7 +123,7 @@
             // 
             // Btn_ok
             // 
-            this.Btn_ok.Location = new System.Drawing.Point(283, 217);
+            this.Btn_ok.Location = new System.Drawing.Point(240, 195);
             this.Btn_ok.Name = "Btn_ok";
             this.Btn_ok.Size = new System.Drawing.Size(75, 24);
             this.Btn_ok.TabIndex = 3;
@@ -162,11 +157,21 @@
             this.tableAdapterManager.perfilTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Sistema_otec.Properties.Resources._9;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(231, 217);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // Frm_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 279);
+            this.ClientSize = new System.Drawing.Size(532, 230);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_login";
@@ -179,9 +184,9 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -138,6 +138,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="bibliotecaDataSet.xsc">
       <DependentUpon>bibliotecaDataSet.xsd</DependentUpon>
@@ -174,6 +175,28 @@
     <Content Include="biblioteca.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Properties\Imagens\3d bar chart.png" />
+    <Content Include="Properties\Imagens\About.png" />
+    <Content Include="Properties\Imagens\Calculator.png" />
+    <Content Include="Properties\Imagens\Pie chart.png" />
+    <Content Include="Properties\Imagens\Search.png" />
+    <None Include="Resources\9.png" />
+    <None Include="Resources\860_main_library_bacteria.png" />
+    <None Include="Resources\Notes.png" />
+    <None Include="Resources\Upload.png" />
+    <None Include="Resources\Download.png" />
+    <None Include="Resources\Notebook.png" />
+    <None Include="Resources\Users.png" />
+    <None Include="Resources\New Document.png" />
+    <None Include="Resources\Gear Alt.png" />
+    <None Include="Resources\Lock.bmp" />
+    <None Include="Resources\Key.bmp" />
+    <None Include="Resources\Home.bmp" />
+    <None Include="Resources\Help book 3d.bmp" />
+    <None Include="Resources\Folder.bmp" />
+    <None Include="Resources\Female.bmp" />
+    <None Include="Resources\Exit.bmp" />
+    <None Include="Resources\Boss.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
