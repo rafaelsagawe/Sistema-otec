@@ -76,5 +76,46 @@ namespace Sistema_otec
             Frm_cadLocatario frm_cloc = new Frm_cadLocatario();
             frm_cloc.Show();
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            try
+            { 
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                    if (System.IO.File.Exists(saveFileDialog1.FileName))
+                    {
+                        System.IO.File.Delete(saveFileDialog1.FileName);
+                    }
+                System.IO.File.Copy(Application.StartupPath.ToString() + "\\biblioteca.accdb", saveFileDialog1.FileName);
+                MessageBox.Show("Operação realizada com sucesso", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Operação cancelada", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro" + ex.Message);
+            }
+            }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                if (System.IO.File.Exists(Application.StartupPath.ToString() + "\\biblioteca.accdb"))
+                {
+                    System.IO.File.Delete(Application.StartupPath.ToString() + "\\biblioteca.accdb");
+                }
+                System.IO.File.Copy(openFileDialog1.FileName, Application.StartupPath.ToString() + "\\biblioteca.accdb");
+                MessageBox.Show("Backup Restaurado com sucesso", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Operação cancelada", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
