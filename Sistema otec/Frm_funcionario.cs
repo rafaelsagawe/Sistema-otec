@@ -47,12 +47,19 @@ namespace Sistema_otec
 
         private void funcionarioBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
         {
-            this.Validate();
-            this.funcionarioBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.bibliotecaDataSet);
-            MessageBox.Show("Registro salvo", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.funcionarioTableAdapter.Fill(this.bibliotecaDataSet.funcionario);
-            this.funcionarioBindingSource.MoveLast();
+            if (senhaTextBox.Text == textBox1.Text)
+            {
+                this.Validate();
+                this.funcionarioBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.bibliotecaDataSet);
+                MessageBox.Show("Registro salvo", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.funcionarioTableAdapter.Fill(this.bibliotecaDataSet.funcionario);
+                this.funcionarioBindingSource.MoveLast();
+            }
+            else
+            {
+                MessageBox.Show("Senha não são indenticas", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

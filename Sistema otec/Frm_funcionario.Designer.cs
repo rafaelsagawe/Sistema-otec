@@ -34,16 +34,17 @@
             System.Windows.Forms.Label loginLabel;
             System.Windows.Forms.Label senhaLabel;
             System.Windows.Forms.Label perfilLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_funcionario));
             System.Windows.Forms.Label situacaoLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_funcionario));
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.funcionarioBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.situacaoCheckBox = new System.Windows.Forms.CheckBox();
             this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibliotecaDataSet = new Sistema_otec.bibliotecaDataSet();
+            this.funcionarioBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -64,7 +65,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.funcionarioTableAdapter = new Sistema_otec.bibliotecaDataSetTableAdapters.funcionarioTableAdapter();
             this.tableAdapterManager = new Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager();
-            this.situacaoCheckBox = new System.Windows.Forms.CheckBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             id_funcionarioLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             loginLabel = new System.Windows.Forms.Label();
@@ -73,10 +75,10 @@
             situacaoLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingNavigator)).BeginInit();
-            this.funcionarioBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingNavigator)).BeginInit();
+            this.funcionarioBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,6 +127,15 @@
             perfilLabel.TabIndex = 8;
             perfilLabel.Text = "perfil:";
             // 
+            // situacaoLabel
+            // 
+            situacaoLabel.AutoSize = true;
+            situacaoLabel.Location = new System.Drawing.Point(22, 192);
+            situacaoLabel.Name = "situacaoLabel";
+            situacaoLabel.Size = new System.Drawing.Size(50, 13);
+            situacaoLabel.TabIndex = 12;
+            situacaoLabel.Text = "situacao:";
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(327, 277);
@@ -150,15 +161,17 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(104, 12);
+            this.tabControl1.Location = new System.Drawing.Point(104, 8);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(379, 259);
+            this.tabControl1.Size = new System.Drawing.Size(387, 259);
             this.tabControl1.TabIndex = 5;
             // 
             // tabPage1
             // 
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(situacaoLabel);
             this.tabPage1.Controls.Add(this.situacaoCheckBox);
             this.tabPage1.Controls.Add(this.funcionarioBindingNavigator);
@@ -175,11 +188,32 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(371, 233);
+            this.tabPage1.Size = new System.Drawing.Size(379, 233);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // situacaoCheckBox
+            // 
+            this.situacaoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.funcionarioBindingSource, "situacao", true));
+            this.situacaoCheckBox.Location = new System.Drawing.Point(100, 187);
+            this.situacaoCheckBox.Name = "situacaoCheckBox";
+            this.situacaoCheckBox.Size = new System.Drawing.Size(228, 24);
+            this.situacaoCheckBox.TabIndex = 13;
+            this.situacaoCheckBox.Text = "Ativo/Inativo ";
+            this.situacaoCheckBox.UseVisualStyleBackColor = true;
+            this.situacaoCheckBox.CheckedChanged += new System.EventHandler(this.situacaoCheckBox_CheckedChanged);
+            // 
+            // funcionarioBindingSource
+            // 
+            this.funcionarioBindingSource.DataMember = "funcionario";
+            this.funcionarioBindingSource.DataSource = this.bibliotecaDataSet;
+            // 
+            // bibliotecaDataSet
+            // 
+            this.bibliotecaDataSet.DataSetName = "bibliotecaDataSet";
+            this.bibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // funcionarioBindingNavigator
             // 
@@ -207,7 +241,7 @@
             this.funcionarioBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.funcionarioBindingNavigator.Name = "funcionarioBindingNavigator";
             this.funcionarioBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.funcionarioBindingNavigator.Size = new System.Drawing.Size(363, 25);
+            this.funcionarioBindingNavigator.Size = new System.Drawing.Size(371, 25);
             this.funcionarioBindingNavigator.TabIndex = 12;
             this.funcionarioBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -219,16 +253,6 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
-            // 
-            // funcionarioBindingSource
-            // 
-            this.funcionarioBindingSource.DataMember = "funcionario";
-            this.funcionarioBindingSource.DataSource = this.bibliotecaDataSet;
-            // 
-            // bibliotecaDataSet
-            // 
-            this.bibliotecaDataSet.DataSetName = "bibliotecaDataSet";
-            this.bibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -318,43 +342,54 @@
             // 
             // id_funcionarioTextBox
             // 
+            this.id_funcionarioTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.id_funcionarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "id_funcionario", true));
             this.id_funcionarioTextBox.Location = new System.Drawing.Point(101, 52);
             this.id_funcionarioTextBox.Name = "id_funcionarioTextBox";
             this.id_funcionarioTextBox.ReadOnly = true;
-            this.id_funcionarioTextBox.Size = new System.Drawing.Size(224, 20);
+            this.id_funcionarioTextBox.Size = new System.Drawing.Size(270, 20);
             this.id_funcionarioTextBox.TabIndex = 1;
             // 
             // nomeTextBox
             // 
+            this.nomeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "nome", true));
             this.nomeTextBox.Location = new System.Drawing.Point(101, 78);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(224, 20);
+            this.nomeTextBox.Size = new System.Drawing.Size(270, 20);
             this.nomeTextBox.TabIndex = 3;
             // 
             // loginTextBox
             // 
+            this.loginTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.loginTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "login", true));
             this.loginTextBox.Location = new System.Drawing.Point(101, 104);
             this.loginTextBox.Name = "loginTextBox";
-            this.loginTextBox.Size = new System.Drawing.Size(224, 20);
+            this.loginTextBox.Size = new System.Drawing.Size(270, 20);
             this.loginTextBox.TabIndex = 5;
             // 
             // senhaTextBox
             // 
+            this.senhaTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.senhaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "senha", true));
             this.senhaTextBox.Location = new System.Drawing.Point(101, 130);
             this.senhaTextBox.Name = "senhaTextBox";
-            this.senhaTextBox.Size = new System.Drawing.Size(224, 20);
+            this.senhaTextBox.PasswordChar = '#';
+            this.senhaTextBox.Size = new System.Drawing.Size(105, 20);
             this.senhaTextBox.TabIndex = 7;
             // 
             // perfilTextBox
             // 
+            this.perfilTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.perfilTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "perfil", true));
             this.perfilTextBox.Location = new System.Drawing.Point(101, 156);
             this.perfilTextBox.Name = "perfilTextBox";
-            this.perfilTextBox.Size = new System.Drawing.Size(224, 20);
+            this.perfilTextBox.Size = new System.Drawing.Size(270, 20);
             this.perfilTextBox.TabIndex = 9;
             // 
             // tabPage2
@@ -363,7 +398,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(583, 337);
+            this.tabPage2.Size = new System.Drawing.Size(379, 233);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -373,7 +408,7 @@
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(-2, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 318);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 316);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -394,31 +429,31 @@
             this.tableAdapterManager.perfilTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // situacaoLabel
+            // textBox1
             // 
-            situacaoLabel.AutoSize = true;
-            situacaoLabel.Location = new System.Drawing.Point(22, 192);
-            situacaoLabel.Name = "situacaoLabel";
-            situacaoLabel.Size = new System.Drawing.Size(50, 13);
-            situacaoLabel.TabIndex = 12;
-            situacaoLabel.Text = "situacao:";
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "senha", true));
+            this.textBox1.Location = new System.Drawing.Point(281, 130);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PasswordChar = '#';
+            this.textBox1.Size = new System.Drawing.Size(90, 20);
+            this.textBox1.TabIndex = 14;
             // 
-            // situacaoCheckBox
+            // label1
             // 
-            this.situacaoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.funcionarioBindingSource, "situacao", true));
-            this.situacaoCheckBox.Location = new System.Drawing.Point(100, 187);
-            this.situacaoCheckBox.Name = "situacaoCheckBox";
-            this.situacaoCheckBox.Size = new System.Drawing.Size(228, 24);
-            this.situacaoCheckBox.TabIndex = 13;
-            this.situacaoCheckBox.Text = "Ativo/Inativo ";
-            this.situacaoCheckBox.UseVisualStyleBackColor = true;
-            this.situacaoCheckBox.CheckedChanged += new System.EventHandler(this.situacaoCheckBox_CheckedChanged);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(212, 133);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Confirmação";
             // 
             // Frm_funcionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(485, 314);
+            this.ClientSize = new System.Drawing.Size(493, 314);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);
@@ -434,11 +469,11 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingNavigator)).EndInit();
             this.funcionarioBindingNavigator.ResumeLayout(false);
             this.funcionarioBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -475,5 +510,7 @@
         private System.Windows.Forms.TextBox senhaTextBox;
         private System.Windows.Forms.TextBox perfilTextBox;
         private System.Windows.Forms.CheckBox situacaoCheckBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
