@@ -19,9 +19,7 @@ namespace Sistema_otec
 
         private void locatarioBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.locatarioBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.bibliotecaDataSet);
+
 
         }
 
@@ -35,6 +33,13 @@ namespace Sistema_otec
         private void button2_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void locatarioBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.locatarioBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.bibliotecaDataSet);
         }
     }
 }

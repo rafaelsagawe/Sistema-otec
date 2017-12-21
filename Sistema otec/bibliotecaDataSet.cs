@@ -7,9 +7,12 @@
     }
 }
 
-namespace Sistema_otec.bibliotecaDataSetTableAdapters {
-    
-    
+namespace Sistema_otec.bibliotecaDataSetTableAdapters
+{
+    partial class funcionarioTableAdapter
+    {
+    }
+
     public partial class editoraTableAdapter {
     }
 }

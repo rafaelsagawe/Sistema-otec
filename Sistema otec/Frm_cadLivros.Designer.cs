@@ -48,10 +48,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.livrosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.livrosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibliotecaDataSet = new Sistema_otec.bibliotecaDataSet();
+            this.editoraBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bibliotecaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.livrosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -87,9 +90,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.livrosTableAdapter = new Sistema_otec.bibliotecaDataSetTableAdapters.livrosTableAdapter();
             this.tableAdapterManager = new Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.bibliotecaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.editoraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.editoraTableAdapter = new Sistema_otec.bibliotecaDataSetTableAdapters.editoraTableAdapter();
             id_livroLabel = new System.Windows.Forms.Label();
             id_editoraLabel = new System.Windows.Forms.Label();
@@ -109,16 +109,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.livrosBindingNavigator)).BeginInit();
-            this.livrosBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.livrosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editoraBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.livrosBindingNavigator)).BeginInit();
+            this.livrosBindingNavigator.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.editoraBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // id_livroLabel
@@ -178,7 +178,7 @@
             // localizacaoLabel
             // 
             localizacaoLabel.AutoSize = true;
-            localizacaoLabel.Location = new System.Drawing.Point(297, 152);
+            localizacaoLabel.Location = new System.Drawing.Point(269, 152);
             localizacaoLabel.Name = "localizacaoLabel";
             localizacaoLabel.Size = new System.Drawing.Size(63, 13);
             localizacaoLabel.TabIndex = 12;
@@ -187,7 +187,7 @@
             // assuntoLabel
             // 
             assuntoLabel.AutoSize = true;
-            assuntoLabel.Location = new System.Drawing.Point(298, 44);
+            assuntoLabel.Location = new System.Drawing.Point(270, 44);
             assuntoLabel.Name = "assuntoLabel";
             assuntoLabel.Size = new System.Drawing.Size(47, 13);
             assuntoLabel.TabIndex = 14;
@@ -196,7 +196,7 @@
             // classificacaoLabel
             // 
             classificacaoLabel.AutoSize = true;
-            classificacaoLabel.Location = new System.Drawing.Point(298, 70);
+            classificacaoLabel.Location = new System.Drawing.Point(270, 70);
             classificacaoLabel.Name = "classificacaoLabel";
             classificacaoLabel.Size = new System.Drawing.Size(71, 13);
             classificacaoLabel.TabIndex = 16;
@@ -205,7 +205,7 @@
             // colecaoLabel
             // 
             colecaoLabel.AutoSize = true;
-            colecaoLabel.Location = new System.Drawing.Point(298, 96);
+            colecaoLabel.Location = new System.Drawing.Point(270, 96);
             colecaoLabel.Name = "colecaoLabel";
             colecaoLabel.Size = new System.Drawing.Size(48, 13);
             colecaoLabel.TabIndex = 18;
@@ -214,7 +214,7 @@
             // tomboLabel
             // 
             tomboLabel.AutoSize = true;
-            tomboLabel.Location = new System.Drawing.Point(298, 126);
+            tomboLabel.Location = new System.Drawing.Point(270, 126);
             tomboLabel.Name = "tomboLabel";
             tomboLabel.Size = new System.Drawing.Size(39, 13);
             tomboLabel.TabIndex = 20;
@@ -223,7 +223,7 @@
             // resenhaLabel
             // 
             resenhaLabel.AutoSize = true;
-            resenhaLabel.Location = new System.Drawing.Point(11, 210);
+            resenhaLabel.Location = new System.Drawing.Point(11, 198);
             resenhaLabel.Name = "resenhaLabel";
             resenhaLabel.Size = new System.Drawing.Size(48, 13);
             resenhaLabel.TabIndex = 24;
@@ -232,7 +232,7 @@
             // autoresLabel
             // 
             autoresLabel.AutoSize = true;
-            autoresLabel.Location = new System.Drawing.Point(297, 178);
+            autoresLabel.Location = new System.Drawing.Point(269, 178);
             autoresLabel.Name = "autoresLabel";
             autoresLabel.Size = new System.Drawing.Size(45, 13);
             autoresLabel.TabIndex = 26;
@@ -261,7 +261,7 @@
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 432);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 415);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -273,7 +273,7 @@
             this.tabControl1.Location = new System.Drawing.Point(105, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(591, 376);
+            this.tabControl1.Size = new System.Drawing.Size(551, 368);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -310,10 +310,42 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(583, 350);
+            this.tabPage1.Size = new System.Drawing.Size(543, 342);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dados Gerais";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.livrosBindingSource, "id_editora", true));
+            this.comboBox1.DataSource = this.editoraBindingSource;
+            this.comboBox1.DisplayMember = "nome";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(83, 66);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(165, 21);
+            this.comboBox1.TabIndex = 31;
+            this.comboBox1.ValueMember = "id_editora";
+            // 
+            // livrosBindingSource
+            // 
+            this.livrosBindingSource.DataMember = "livros";
+            this.livrosBindingSource.DataSource = this.bibliotecaDataSet;
+            // 
+            // bibliotecaDataSet
+            // 
+            this.bibliotecaDataSet.DataSetName = "bibliotecaDataSet";
+            this.bibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // editoraBindingSource
+            // 
+            this.editoraBindingSource.DataMember = "editora";
+            this.editoraBindingSource.DataSource = this.bibliotecaDataSetBindingSource;
+            // 
+            // bibliotecaDataSetBindingSource
+            // 
+            this.bibliotecaDataSetBindingSource.DataSource = this.bibliotecaDataSet;
+            this.bibliotecaDataSetBindingSource.Position = 0;
             // 
             // livrosBindingNavigator
             // 
@@ -341,7 +373,7 @@
             this.livrosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.livrosBindingNavigator.Name = "livrosBindingNavigator";
             this.livrosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.livrosBindingNavigator.Size = new System.Drawing.Size(575, 25);
+            this.livrosBindingNavigator.Size = new System.Drawing.Size(535, 25);
             this.livrosBindingNavigator.TabIndex = 30;
             this.livrosBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -354,16 +386,6 @@
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
-            // 
-            // livrosBindingSource
-            // 
-            this.livrosBindingSource.DataMember = "livros";
-            this.livrosBindingSource.DataSource = this.bibliotecaDataSet;
-            // 
-            // bibliotecaDataSet
-            // 
-            this.bibliotecaDataSet.DataSetName = "bibliotecaDataSet";
-            this.bibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -495,7 +517,7 @@
             // localizacaoTextBox
             // 
             this.localizacaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.livrosBindingSource, "localizacao", true));
-            this.localizacaoTextBox.Location = new System.Drawing.Point(374, 145);
+            this.localizacaoTextBox.Location = new System.Drawing.Point(346, 145);
             this.localizacaoTextBox.Name = "localizacaoTextBox";
             this.localizacaoTextBox.Size = new System.Drawing.Size(182, 20);
             this.localizacaoTextBox.TabIndex = 13;
@@ -503,7 +525,7 @@
             // assuntoTextBox
             // 
             this.assuntoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.livrosBindingSource, "assunto", true));
-            this.assuntoTextBox.Location = new System.Drawing.Point(375, 41);
+            this.assuntoTextBox.Location = new System.Drawing.Point(347, 41);
             this.assuntoTextBox.Name = "assuntoTextBox";
             this.assuntoTextBox.Size = new System.Drawing.Size(182, 20);
             this.assuntoTextBox.TabIndex = 15;
@@ -511,7 +533,7 @@
             // classificacaoTextBox
             // 
             this.classificacaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.livrosBindingSource, "classificacao", true));
-            this.classificacaoTextBox.Location = new System.Drawing.Point(375, 67);
+            this.classificacaoTextBox.Location = new System.Drawing.Point(347, 67);
             this.classificacaoTextBox.Name = "classificacaoTextBox";
             this.classificacaoTextBox.Size = new System.Drawing.Size(182, 20);
             this.classificacaoTextBox.TabIndex = 17;
@@ -519,7 +541,7 @@
             // colecaoTextBox
             // 
             this.colecaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.livrosBindingSource, "colecao", true));
-            this.colecaoTextBox.Location = new System.Drawing.Point(375, 93);
+            this.colecaoTextBox.Location = new System.Drawing.Point(347, 93);
             this.colecaoTextBox.Name = "colecaoTextBox";
             this.colecaoTextBox.Size = new System.Drawing.Size(182, 20);
             this.colecaoTextBox.TabIndex = 19;
@@ -527,7 +549,7 @@
             // tomboCheckBox
             // 
             this.tomboCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.livrosBindingSource, "tombo", true));
-            this.tomboCheckBox.Location = new System.Drawing.Point(375, 121);
+            this.tomboCheckBox.Location = new System.Drawing.Point(347, 121);
             this.tomboCheckBox.Name = "tomboCheckBox";
             this.tomboCheckBox.Size = new System.Drawing.Size(182, 24);
             this.tomboCheckBox.TabIndex = 21;
@@ -537,16 +559,16 @@
             // resenhaTextBox
             // 
             this.resenhaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.livrosBindingSource, "resenha", true));
-            this.resenhaTextBox.Location = new System.Drawing.Point(9, 226);
+            this.resenhaTextBox.Location = new System.Drawing.Point(9, 214);
             this.resenhaTextBox.Multiline = true;
             this.resenhaTextBox.Name = "resenhaTextBox";
-            this.resenhaTextBox.Size = new System.Drawing.Size(566, 116);
+            this.resenhaTextBox.Size = new System.Drawing.Size(520, 116);
             this.resenhaTextBox.TabIndex = 25;
             // 
             // autoresTextBox
             // 
             this.autoresTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.livrosBindingSource, "autores", true));
-            this.autoresTextBox.Location = new System.Drawing.Point(374, 175);
+            this.autoresTextBox.Location = new System.Drawing.Point(346, 175);
             this.autoresTextBox.Name = "autoresTextBox";
             this.autoresTextBox.Size = new System.Drawing.Size(182, 20);
             this.autoresTextBox.TabIndex = 27;
@@ -634,7 +656,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(227, 391);
+            this.button1.Location = new System.Drawing.Point(227, 379);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -643,7 +665,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(396, 391);
+            this.button2.Location = new System.Drawing.Point(396, 379);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
@@ -667,28 +689,6 @@
             this.tableAdapterManager.perfilTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.livrosBindingSource, "id_editora", true));
-            this.comboBox1.DataSource = this.editoraBindingSource;
-            this.comboBox1.DisplayMember = "nome";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(83, 66);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(165, 21);
-            this.comboBox1.TabIndex = 31;
-            this.comboBox1.ValueMember = "id_editora";
-            // 
-            // bibliotecaDataSetBindingSource
-            // 
-            this.bibliotecaDataSetBindingSource.DataSource = this.bibliotecaDataSet;
-            this.bibliotecaDataSetBindingSource.Position = 0;
-            // 
-            // editoraBindingSource
-            // 
-            this.editoraBindingSource.DataMember = "editora";
-            this.editoraBindingSource.DataSource = this.bibliotecaDataSetBindingSource;
-            // 
             // editoraTableAdapter
             // 
             this.editoraTableAdapter.ClearBeforeFill = true;
@@ -697,7 +697,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 431);
+            this.ClientSize = new System.Drawing.Size(660, 410);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);
@@ -714,11 +714,13 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.livrosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editoraBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.livrosBindingNavigator)).EndInit();
             this.livrosBindingNavigator.ResumeLayout(false);
             this.livrosBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.livrosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
@@ -726,8 +728,6 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.editoraBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

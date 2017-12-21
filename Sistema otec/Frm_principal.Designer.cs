@@ -33,15 +33,14 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.locatarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.editorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.locatáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.funcionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.livrosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.editorasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manutençãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.locaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.devoluçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.utilitariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -57,10 +56,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
@@ -73,6 +69,11 @@
             this.livrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.locatáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.livrosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.locaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.devoluçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.restauraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -118,16 +119,26 @@
             // locatarioToolStripMenuItem
             // 
             this.locatarioToolStripMenuItem.Name = "locatarioToolStripMenuItem";
-            this.locatarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.locatarioToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.locatarioToolStripMenuItem.Text = "Locatário";
             this.locatarioToolStripMenuItem.Click += new System.EventHandler(this.locatarioToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(134, 6);
             // 
             // editorToolStripMenuItem
             // 
             this.editorToolStripMenuItem.Name = "editorToolStripMenuItem";
-            this.editorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editorToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.editorToolStripMenuItem.Text = "Editor";
             this.editorToolStripMenuItem.Click += new System.EventHandler(this.editorToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(134, 6);
             // 
             // consultasToolStripMenuItem
             // 
@@ -142,26 +153,10 @@
             this.consultasToolStripMenuItem.Text = "Consultas";
             this.consultasToolStripMenuItem.Click += new System.EventHandler(this.consultasToolStripMenuItem_Click);
             // 
-            // locatáriosToolStripMenuItem
+            // toolStripSeparator6
             // 
-            this.locatáriosToolStripMenuItem.Image = global::Sistema_otec.Properties.Resources.Users;
-            this.locatáriosToolStripMenuItem.Name = "locatáriosToolStripMenuItem";
-            this.locatáriosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.locatáriosToolStripMenuItem.Text = "Locatários";
-            // 
-            // funcionáriosToolStripMenuItem
-            // 
-            this.funcionáriosToolStripMenuItem.Image = global::Sistema_otec.Properties.Resources.Boss;
-            this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
-            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.funcionáriosToolStripMenuItem.Text = "Funcionários";
-            // 
-            // livrosToolStripMenuItem1
-            // 
-            this.livrosToolStripMenuItem1.Image = global::Sistema_otec.Properties.Resources.Help_book_3d;
-            this.livrosToolStripMenuItem1.Name = "livrosToolStripMenuItem1";
-            this.livrosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.livrosToolStripMenuItem1.Text = "Livros";
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(139, 6);
             // 
             // editorasToolStripMenuItem
             // 
@@ -177,23 +172,17 @@
             this.toolStripSeparator7,
             this.backupToolStripMenuItem,
             this.restauraçãoToolStripMenuItem,
+            this.toolStripSeparator8,
             this.relatoriosToolStripMenuItem});
             this.manutençãoToolStripMenuItem.Name = "manutençãoToolStripMenuItem";
             this.manutençãoToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
             this.manutençãoToolStripMenuItem.Text = "Manutenção";
             this.manutençãoToolStripMenuItem.Click += new System.EventHandler(this.manutençãoToolStripMenuItem_Click);
             // 
-            // locaçãoToolStripMenuItem
+            // toolStripSeparator7
             // 
-            this.locaçãoToolStripMenuItem.Name = "locaçãoToolStripMenuItem";
-            this.locaçãoToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.locaçãoToolStripMenuItem.Text = "Locação";
-            // 
-            // devoluçãoToolStripMenuItem
-            // 
-            this.devoluçãoToolStripMenuItem.Name = "devoluçãoToolStripMenuItem";
-            this.devoluçãoToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.devoluçãoToolStripMenuItem.Text = "Devolução";
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(149, 6);
             // 
             // utilitariosToolStripMenuItem
             // 
@@ -307,25 +296,10 @@
             this.saveFileDialog1.DefaultExt = "bdBibli";
             this.saveFileDialog1.Filter = "\"Backup Biblioteca (*.bdBibli)|*.bdBibli|Todos os arquivos (*.*)|*.*\"";
             // 
-            // toolStripMenuItem1
+            // toolStripSeparator8
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(149, 6);
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(139, 6);
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(135, 6);
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(149, 6);
             // 
             // toolStripButton1
             // 
@@ -426,7 +400,7 @@
             // 
             this.livrosToolStripMenuItem.Image = global::Sistema_otec.Properties.Resources.Notebook;
             this.livrosToolStripMenuItem.Name = "livrosToolStripMenuItem";
-            this.livrosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.livrosToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.livrosToolStripMenuItem.Text = "Livros";
             this.livrosToolStripMenuItem.Click += new System.EventHandler(this.livrosToolStripMenuItem_Click);
             // 
@@ -434,7 +408,7 @@
             // 
             this.funcionárioToolStripMenuItem.Image = global::Sistema_otec.Properties.Resources.Boss;
             this.funcionárioToolStripMenuItem.Name = "funcionárioToolStripMenuItem";
-            this.funcionárioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.funcionárioToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.funcionárioToolStripMenuItem.Text = "Funcionário";
             this.funcionárioToolStripMenuItem.Click += new System.EventHandler(this.funcionárioToolStripMenuItem_Click);
             // 
@@ -442,15 +416,50 @@
             // 
             this.sairToolStripMenuItem.Image = global::Sistema_otec.Properties.Resources.Exit;
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            // 
+            // locatáriosToolStripMenuItem
+            // 
+            this.locatáriosToolStripMenuItem.Image = global::Sistema_otec.Properties.Resources.Users;
+            this.locatáriosToolStripMenuItem.Name = "locatáriosToolStripMenuItem";
+            this.locatáriosToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.locatáriosToolStripMenuItem.Text = "Locatários";
+            // 
+            // funcionáriosToolStripMenuItem
+            // 
+            this.funcionáriosToolStripMenuItem.Image = global::Sistema_otec.Properties.Resources.Boss;
+            this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
+            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.funcionáriosToolStripMenuItem.Text = "Funcionários";
+            // 
+            // livrosToolStripMenuItem1
+            // 
+            this.livrosToolStripMenuItem1.Image = global::Sistema_otec.Properties.Resources.Help_book_3d;
+            this.livrosToolStripMenuItem1.Name = "livrosToolStripMenuItem1";
+            this.livrosToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.livrosToolStripMenuItem1.Text = "Livros";
+            // 
+            // locaçãoToolStripMenuItem
+            // 
+            this.locaçãoToolStripMenuItem.Image = global::Sistema_otec.Properties.Resources.Go_forward;
+            this.locaçãoToolStripMenuItem.Name = "locaçãoToolStripMenuItem";
+            this.locaçãoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.locaçãoToolStripMenuItem.Text = "Locação";
+            // 
+            // devoluçãoToolStripMenuItem
+            // 
+            this.devoluçãoToolStripMenuItem.Image = global::Sistema_otec.Properties.Resources.Go_back;
+            this.devoluçãoToolStripMenuItem.Name = "devoluçãoToolStripMenuItem";
+            this.devoluçãoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.devoluçãoToolStripMenuItem.Text = "Devolução";
             // 
             // backupToolStripMenuItem
             // 
             this.backupToolStripMenuItem.Image = global::Sistema_otec.Properties.Resources.Download;
             this.backupToolStripMenuItem.Name = "backupToolStripMenuItem";
-            this.backupToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.backupToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.backupToolStripMenuItem.Text = "Backup";
             this.backupToolStripMenuItem.Click += new System.EventHandler(this.backupToolStripMenuItem_Click);
             // 
@@ -458,7 +467,7 @@
             // 
             this.restauraçãoToolStripMenuItem.Image = global::Sistema_otec.Properties.Resources.Upload;
             this.restauraçãoToolStripMenuItem.Name = "restauraçãoToolStripMenuItem";
-            this.restauraçãoToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.restauraçãoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.restauraçãoToolStripMenuItem.Text = "Restauração";
             this.restauraçãoToolStripMenuItem.Click += new System.EventHandler(this.restauraçãoToolStripMenuItem_Click);
             // 
@@ -466,7 +475,7 @@
             // 
             this.relatoriosToolStripMenuItem.Image = global::Sistema_otec.Properties.Resources._3d_bar_chart;
             this.relatoriosToolStripMenuItem.Name = "relatoriosToolStripMenuItem";
-            this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.relatoriosToolStripMenuItem.Text = "Relatorios";
             // 
             // calculadoraToolStripMenuItem
@@ -581,5 +590,6 @@
         private System.Windows.Forms.ToolStripMenuItem restauraçãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripMenuItem relatoriosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
     }
 }

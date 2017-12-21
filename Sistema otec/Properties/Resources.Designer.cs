@@ -173,6 +173,26 @@ namespace Sistema_otec.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Go_back {
+            get {
+                object obj = ResourceManager.GetObject("Go back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Go_forward {
+            get {
+                object obj = ResourceManager.GetObject("Go forward", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Help_book_3d {
             get {
                 object obj = ResourceManager.GetObject("Help book 3d", resourceCulture);

@@ -60,6 +60,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bibliotecaDataSet.cs">
+      <DependentUpon>bibliotecaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="bibliotecaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -180,6 +183,8 @@
     <Content Include="Properties\Imagens\Calculator.png" />
     <Content Include="Properties\Imagens\Pie chart.png" />
     <Content Include="Properties\Imagens\Search.png" />
+    <None Include="Resources\Go forward.bmp" />
+    <None Include="Resources\Go back.bmp" />
     <None Include="Resources\9.png" />
     <None Include="Resources\860_main_library_bacteria.png" />
     <None Include="Resources\Notes.png" />

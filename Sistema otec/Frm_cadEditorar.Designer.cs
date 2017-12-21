@@ -109,7 +109,7 @@
             // id_editoraLabel
             // 
             id_editoraLabel.AutoSize = true;
-            id_editoraLabel.Location = new System.Drawing.Point(25, 66);
+            id_editoraLabel.Location = new System.Drawing.Point(6, 39);
             id_editoraLabel.Name = "id_editoraLabel";
             id_editoraLabel.Size = new System.Drawing.Size(53, 13);
             id_editoraLabel.TabIndex = 0;
@@ -118,7 +118,7 @@
             // nomeLabel
             // 
             nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(25, 92);
+            nomeLabel.Location = new System.Drawing.Point(6, 65);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(36, 13);
             nomeLabel.TabIndex = 2;
@@ -127,7 +127,7 @@
             // enderecoLabel
             // 
             enderecoLabel.AutoSize = true;
-            enderecoLabel.Location = new System.Drawing.Point(25, 118);
+            enderecoLabel.Location = new System.Drawing.Point(6, 91);
             enderecoLabel.Name = "enderecoLabel";
             enderecoLabel.Size = new System.Drawing.Size(55, 13);
             enderecoLabel.TabIndex = 4;
@@ -136,7 +136,7 @@
             // bairroLabel
             // 
             bairroLabel.AutoSize = true;
-            bairroLabel.Location = new System.Drawing.Point(25, 144);
+            bairroLabel.Location = new System.Drawing.Point(6, 117);
             bairroLabel.Name = "bairroLabel";
             bairroLabel.Size = new System.Drawing.Size(36, 13);
             bairroLabel.TabIndex = 6;
@@ -145,7 +145,7 @@
             // cidadeLabel
             // 
             cidadeLabel.AutoSize = true;
-            cidadeLabel.Location = new System.Drawing.Point(25, 170);
+            cidadeLabel.Location = new System.Drawing.Point(6, 143);
             cidadeLabel.Name = "cidadeLabel";
             cidadeLabel.Size = new System.Drawing.Size(42, 13);
             cidadeLabel.TabIndex = 8;
@@ -154,7 +154,7 @@
             // ufLabel
             // 
             ufLabel.AutoSize = true;
-            ufLabel.Location = new System.Drawing.Point(25, 196);
+            ufLabel.Location = new System.Drawing.Point(6, 169);
             ufLabel.Name = "ufLabel";
             ufLabel.Size = new System.Drawing.Size(19, 13);
             ufLabel.TabIndex = 10;
@@ -163,7 +163,7 @@
             // foneLabel
             // 
             foneLabel.AutoSize = true;
-            foneLabel.Location = new System.Drawing.Point(25, 222);
+            foneLabel.Location = new System.Drawing.Point(6, 195);
             foneLabel.Name = "foneLabel";
             foneLabel.Size = new System.Drawing.Size(31, 13);
             foneLabel.TabIndex = 12;
@@ -172,7 +172,7 @@
             // cepLabel
             // 
             cepLabel.AutoSize = true;
-            cepLabel.Location = new System.Drawing.Point(25, 248);
+            cepLabel.Location = new System.Drawing.Point(6, 221);
             cepLabel.Name = "cepLabel";
             cepLabel.Size = new System.Drawing.Size(28, 13);
             cepLabel.TabIndex = 14;
@@ -181,7 +181,7 @@
             // cnpjLabel
             // 
             cnpjLabel.AutoSize = true;
-            cnpjLabel.Location = new System.Drawing.Point(25, 274);
+            cnpjLabel.Location = new System.Drawing.Point(6, 247);
             cnpjLabel.Name = "cnpjLabel";
             cnpjLabel.Size = new System.Drawing.Size(30, 13);
             cnpjLabel.TabIndex = 16;
@@ -189,9 +189,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(306, 437);
+            this.button2.Location = new System.Drawing.Point(309, 317);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(75, 25);
             this.button2.TabIndex = 7;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
@@ -199,21 +199,23 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(171, 437);
+            this.button1.Location = new System.Drawing.Point(174, 317);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 25);
             this.button1.TabIndex = 6;
             this.button1.Text = "Ok";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(102, 7);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(467, 424);
+            this.tabControl1.Size = new System.Drawing.Size(352, 304);
             this.tabControl1.TabIndex = 5;
             // 
             // tabPage1
@@ -242,7 +244,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(459, 398);
+            this.tabPage1.Size = new System.Drawing.Size(344, 278);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -274,7 +276,7 @@
             this.editoraBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.editoraBindingNavigator.Name = "editoraBindingNavigator";
             this.editoraBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.editoraBindingNavigator.Size = new System.Drawing.Size(451, 25);
+            this.editoraBindingNavigator.Size = new System.Drawing.Size(336, 25);
             this.editoraBindingNavigator.TabIndex = 18;
             this.editoraBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -386,75 +388,93 @@
             // 
             // id_editoraTextBox
             // 
+            this.id_editoraTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.id_editoraTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editoraBindingSource, "id_editora", true));
-            this.id_editoraTextBox.Location = new System.Drawing.Point(86, 63);
+            this.id_editoraTextBox.Location = new System.Drawing.Point(67, 36);
             this.id_editoraTextBox.Name = "id_editoraTextBox";
             this.id_editoraTextBox.ReadOnly = true;
-            this.id_editoraTextBox.Size = new System.Drawing.Size(100, 20);
+            this.id_editoraTextBox.Size = new System.Drawing.Size(247, 20);
             this.id_editoraTextBox.TabIndex = 1;
             // 
             // nomeTextBox
             // 
+            this.nomeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editoraBindingSource, "nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(86, 89);
+            this.nomeTextBox.Location = new System.Drawing.Point(67, 62);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nomeTextBox.Size = new System.Drawing.Size(247, 20);
             this.nomeTextBox.TabIndex = 3;
             // 
             // enderecoTextBox
             // 
+            this.enderecoTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editoraBindingSource, "endereco", true));
-            this.enderecoTextBox.Location = new System.Drawing.Point(86, 115);
+            this.enderecoTextBox.Location = new System.Drawing.Point(67, 88);
             this.enderecoTextBox.Name = "enderecoTextBox";
-            this.enderecoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.enderecoTextBox.Size = new System.Drawing.Size(247, 20);
             this.enderecoTextBox.TabIndex = 5;
             // 
             // bairroTextBox
             // 
+            this.bairroTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bairroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editoraBindingSource, "bairro", true));
-            this.bairroTextBox.Location = new System.Drawing.Point(86, 141);
+            this.bairroTextBox.Location = new System.Drawing.Point(67, 114);
             this.bairroTextBox.Name = "bairroTextBox";
-            this.bairroTextBox.Size = new System.Drawing.Size(100, 20);
+            this.bairroTextBox.Size = new System.Drawing.Size(247, 20);
             this.bairroTextBox.TabIndex = 7;
             // 
             // cidadeTextBox
             // 
+            this.cidadeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editoraBindingSource, "cidade", true));
-            this.cidadeTextBox.Location = new System.Drawing.Point(86, 167);
+            this.cidadeTextBox.Location = new System.Drawing.Point(67, 140);
             this.cidadeTextBox.Name = "cidadeTextBox";
-            this.cidadeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cidadeTextBox.Size = new System.Drawing.Size(247, 20);
             this.cidadeTextBox.TabIndex = 9;
             // 
             // ufTextBox
             // 
+            this.ufTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ufTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editoraBindingSource, "uf", true));
-            this.ufTextBox.Location = new System.Drawing.Point(86, 193);
+            this.ufTextBox.Location = new System.Drawing.Point(67, 166);
             this.ufTextBox.Name = "ufTextBox";
-            this.ufTextBox.Size = new System.Drawing.Size(100, 20);
+            this.ufTextBox.Size = new System.Drawing.Size(247, 20);
             this.ufTextBox.TabIndex = 11;
             // 
             // foneTextBox
             // 
+            this.foneTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.foneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editoraBindingSource, "fone", true));
-            this.foneTextBox.Location = new System.Drawing.Point(86, 219);
+            this.foneTextBox.Location = new System.Drawing.Point(67, 192);
             this.foneTextBox.Name = "foneTextBox";
-            this.foneTextBox.Size = new System.Drawing.Size(100, 20);
+            this.foneTextBox.Size = new System.Drawing.Size(247, 20);
             this.foneTextBox.TabIndex = 13;
             // 
             // cepTextBox
             // 
+            this.cepTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cepTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editoraBindingSource, "cep", true));
-            this.cepTextBox.Location = new System.Drawing.Point(86, 245);
+            this.cepTextBox.Location = new System.Drawing.Point(67, 218);
             this.cepTextBox.Name = "cepTextBox";
-            this.cepTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cepTextBox.Size = new System.Drawing.Size(247, 20);
             this.cepTextBox.TabIndex = 15;
             // 
             // cnpjTextBox
             // 
+            this.cnpjTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cnpjTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editoraBindingSource, "cnpj", true));
-            this.cnpjTextBox.Location = new System.Drawing.Point(86, 271);
+            this.cnpjTextBox.Location = new System.Drawing.Point(67, 244);
             this.cnpjTextBox.Name = "cnpjTextBox";
-            this.cnpjTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cnpjTextBox.Size = new System.Drawing.Size(247, 20);
             this.cnpjTextBox.TabIndex = 17;
             // 
             // tabPage2
@@ -574,10 +594,12 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(-3, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 431);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 354);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
@@ -601,7 +623,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(571, 479);
+            this.ClientSize = new System.Drawing.Size(455, 351);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);

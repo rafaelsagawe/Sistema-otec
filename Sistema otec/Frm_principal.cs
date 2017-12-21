@@ -20,7 +20,7 @@ namespace Sistema_otec
         private void funcionárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_funcionario frm_fun = new Frm_funcionario();
-            frm_fun.Show();
+            frm_fun.ShowDialog();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -62,19 +62,19 @@ namespace Sistema_otec
         private void livrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_cadLivros frm_cl = new Frm_cadLivros();
-            frm_cl.Show();
+            frm_cl.ShowDialog();
         }
 
         private void editorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_cadEditorar frm_cedi = new Frm_cadEditorar();
-            frm_cedi.Show();
+            frm_cedi.ShowDialog();
         }
 
         private void locatarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_cadLocatario frm_cloc = new Frm_cadLocatario();
-            frm_cloc.Show();
+            frm_cloc.ShowDialog();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
