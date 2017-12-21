@@ -80,6 +80,12 @@
     <Compile Include="Frm_cadLivros.Designer.cs">
       <DependentUpon>Frm_cadLivros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_cadLocacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_cadLocacao.Designer.cs">
+      <DependentUpon>Frm_cadLocacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_cadLocatario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_cadLivros.resx">
       <DependentUpon>Frm_cadLivros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_cadLocacao.resx">
+      <DependentUpon>Frm_cadLocacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_cadLocatario.resx">
       <DependentUpon>Frm_cadLocatario.cs</DependentUpon>
@@ -183,6 +192,9 @@
     <Content Include="Properties\Imagens\Calculator.png" />
     <Content Include="Properties\Imagens\Pie chart.png" />
     <Content Include="Properties\Imagens\Search.png" />
+    <None Include="Resources\Remove.bmp" />
+    <None Include="Resources\Erase.bmp" />
+    <None Include="Resources\Add.bmp" />
     <None Include="Resources\Go forward.bmp" />
     <None Include="Resources\Go back.bmp" />
     <None Include="Resources\9.png" />

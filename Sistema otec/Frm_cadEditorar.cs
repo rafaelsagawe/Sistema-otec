@@ -83,5 +83,10 @@ namespace Sistema_otec
         {
 
         }
+
+        private void ufLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -178,5 +178,15 @@ namespace Sistema_otec
         {
 
         }
+
+        private void Frm_principal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
