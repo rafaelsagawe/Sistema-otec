@@ -48,7 +48,7 @@ namespace Sistema_otec
         }
 
         private void livrosBindingNavigatorSaveItem_Click_2(object sender, EventArgs e)
-        {
+        { //Gerar caixa informando que o registro foi salvo
             {
                 try
                 {
@@ -56,10 +56,12 @@ namespace Sistema_otec
                     this.livrosBindingSource.EndEdit();
                     this.tableAdapterManager.UpdateAll(this.bibliotecaDataSet);
                     MessageBox.Show("Registro salvo com sucesso", "Informa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // caso tenha sucesso o processo de save
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Falha ao salvar o registro", "informa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // caso de algum erro no processo de save
                 }
             }
     }

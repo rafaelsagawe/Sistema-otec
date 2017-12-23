@@ -71,7 +71,7 @@ namespace Sistema_otec
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Dispose(); //fecha a janela
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

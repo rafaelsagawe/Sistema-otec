@@ -25,56 +25,61 @@ namespace Sistema_otec
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            toolStripStatusLabel2.Text = DateTime.Now.ToShortDateString();
-            toolStripStatusLabel3.Text = DateTime.Now.ToShortTimeString();
+            toolStripStatusLabel2.Text = DateTime.Now.ToShortDateString(); //Usa uma label da toolStripStatus para amostrar a hora
+            toolStripStatusLabel3.Text = DateTime.Now.ToShortTimeString(); //Usa uma label da toolStripStatus para amostrar a data
         }
 
         private void sairToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Exit(); //fecha a aplicação 
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Exit(); //fecha a aplicação 
         }
 
         private void Frm_principal_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            Application.Exit(); //fecha a aplicação 
         }
 
         private void calculadoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("calc");
+            System.Diagnostics.Process.Start("calc"); //chama aplicação de calculadora do windows
         }
 
         private void wordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("winword");
+            System.Diagnostics.Process.Start("winword"); // chama o word do pacote microsoft office
         }
 
         private void blocoDeNotasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("notepad");
+            System.Diagnostics.Process.Start("notepad"); //chama aplicação de bloco de notas do windows
         }
 
         private void livrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_cadLivros frm_cl = new Frm_cadLivros();
             frm_cl.ShowDialog();
+            // o codigo acima tem a função de chamar a um formulario de forma modal
         }
 
         private void editorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_cadEditorar frm_cedi = new Frm_cadEditorar();
             frm_cedi.ShowDialog();
+            // o codigo acima tem a função de chamar a um formulario de forma modal
+
         }
 
         private void locatarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_cadLocatario frm_cloc = new Frm_cadLocatario();
             frm_cloc.ShowDialog();
+            // o codigo acima tem a função de chamar a um formulario de forma modal
+
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -186,7 +191,18 @@ namespace Sistema_otec
 
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
-            
+            Frm_cadLocacao frm_cadLoca = new Frm_cadLocacao();
+            frm_cadLoca.ShowDialog();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void barraConsultaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripConsulta.Visible = true;
         }
     }
 }

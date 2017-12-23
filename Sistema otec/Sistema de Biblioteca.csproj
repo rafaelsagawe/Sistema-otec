@@ -192,6 +192,12 @@
     <Content Include="Properties\Imagens\Calculator.png" />
     <Content Include="Properties\Imagens\Pie chart.png" />
     <Content Include="Properties\Imagens\Search.png" />
+    <None Include="Resources\Write Document.png" />
+    <None Include="Resources\Modify.bmp" />
+    <None Include="Resources\Male.bmp" />
+    <None Include="Resources\Report.bmp" />
+    <None Include="Resources\Import Document.png" />
+    <None Include="Resources\Export To Document.png" />
     <None Include="Resources\Remove.bmp" />
     <None Include="Resources\Erase.bmp" />
     <None Include="Resources\Add.bmp" />
