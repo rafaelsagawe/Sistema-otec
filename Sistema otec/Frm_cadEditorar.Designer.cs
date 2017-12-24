@@ -43,37 +43,26 @@
             this.button1 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cepTextBox = new System.Windows.Forms.TextBox();
+            this.editoraBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bibliotecaDataSet = new Sistema_otec.bibliotecaDataSet();
+            this.ufTextBox = new System.Windows.Forms.TextBox();
+            this.cidadeTextBox = new System.Windows.Forms.TextBox();
+            this.enderecoTextBox = new System.Windows.Forms.TextBox();
+            this.bairroTextBox = new System.Windows.Forms.TextBox();
             this.editoraBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.editoraBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.id_editoraTextBox = new System.Windows.Forms.TextBox();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
-            this.enderecoTextBox = new System.Windows.Forms.TextBox();
-            this.bairroTextBox = new System.Windows.Forms.TextBox();
-            this.cidadeTextBox = new System.Windows.Forms.TextBox();
-            this.ufTextBox = new System.Windows.Forms.TextBox();
             this.foneTextBox = new System.Windows.Forms.TextBox();
-            this.cepTextBox = new System.Windows.Forms.TextBox();
             this.cnpjTextBox = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.editoraDataGridView = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.editoraBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bibliotecaDataSet = new Sistema_otec.bibliotecaDataSet();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,8 +72,19 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.editoraTableAdapter = new Sistema_otec.bibliotecaDataSetTableAdapters.editoraTableAdapter();
             this.tableAdapterManager = new Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.editoraBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             id_editoraLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             enderecoLabel = new System.Windows.Forms.Label();
@@ -96,6 +96,9 @@
             cnpjLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.editoraBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editoraBindingNavigator)).BeginInit();
             this.editoraBindingNavigator.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -103,15 +106,12 @@
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.editoraBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // id_editoraLabel
             // 
             id_editoraLabel.AutoSize = true;
-            id_editoraLabel.Location = new System.Drawing.Point(6, 39);
+            id_editoraLabel.Location = new System.Drawing.Point(10, 39);
             id_editoraLabel.Name = "id_editoraLabel";
             id_editoraLabel.Size = new System.Drawing.Size(53, 13);
             id_editoraLabel.TabIndex = 0;
@@ -120,7 +120,7 @@
             // nomeLabel
             // 
             nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(6, 65);
+            nomeLabel.Location = new System.Drawing.Point(10, 65);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(36, 13);
             nomeLabel.TabIndex = 2;
@@ -166,7 +166,7 @@
             // foneLabel
             // 
             foneLabel.AutoSize = true;
-            foneLabel.Location = new System.Drawing.Point(11, 91);
+            foneLabel.Location = new System.Drawing.Point(15, 91);
             foneLabel.Name = "foneLabel";
             foneLabel.Size = new System.Drawing.Size(31, 13);
             foneLabel.TabIndex = 12;
@@ -184,7 +184,7 @@
             // cnpjLabel
             // 
             cnpjLabel.AutoSize = true;
-            cnpjLabel.Location = new System.Drawing.Point(11, 117);
+            cnpjLabel.Location = new System.Drawing.Point(15, 117);
             cnpjLabel.Name = "cnpjLabel";
             cnpjLabel.Size = new System.Drawing.Size(30, 13);
             cnpjLabel.TabIndex = 16;
@@ -192,7 +192,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(354, 272);
+            this.button2.Location = new System.Drawing.Point(404, 252);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 25);
             this.button2.TabIndex = 7;
@@ -202,7 +202,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(219, 272);
+            this.button1.Location = new System.Drawing.Point(269, 252);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 25);
             this.button1.TabIndex = 6;
@@ -215,10 +215,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(102, 7);
+            this.tabControl1.Location = new System.Drawing.Point(156, 7);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(487, 259);
+            this.tabControl1.Size = new System.Drawing.Size(514, 234);
             this.tabControl1.TabIndex = 5;
             // 
             // tabPage1
@@ -238,11 +238,90 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(470, 233);
+            this.tabPage1.Size = new System.Drawing.Size(506, 208);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.cepTextBox);
+            this.groupBox2.Controls.Add(cepLabel);
+            this.groupBox2.Controls.Add(this.ufTextBox);
+            this.groupBox2.Controls.Add(ufLabel);
+            this.groupBox2.Controls.Add(enderecoLabel);
+            this.groupBox2.Controls.Add(this.cidadeTextBox);
+            this.groupBox2.Controls.Add(cidadeLabel);
+            this.groupBox2.Controls.Add(this.enderecoTextBox);
+            this.groupBox2.Controls.Add(this.bairroTextBox);
+            this.groupBox2.Controls.Add(bairroLabel);
+            this.groupBox2.Location = new System.Drawing.Point(238, 34);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(245, 152);
+            this.groupBox2.TabIndex = 19;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Endereço";
+            // 
+            // cepTextBox
+            // 
+            this.cepTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cepTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editoraBindingSource, "cep", true));
+            this.cepTextBox.Location = new System.Drawing.Point(67, 128);
+            this.cepTextBox.Name = "cepTextBox";
+            this.cepTextBox.Size = new System.Drawing.Size(172, 20);
+            this.cepTextBox.TabIndex = 15;
+            // 
+            // editoraBindingSource
+            // 
+            this.editoraBindingSource.DataMember = "editora";
+            this.editoraBindingSource.DataSource = this.bibliotecaDataSet;
+            // 
+            // bibliotecaDataSet
+            // 
+            this.bibliotecaDataSet.DataSetName = "bibliotecaDataSet";
+            this.bibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ufTextBox
+            // 
+            this.ufTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ufTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editoraBindingSource, "uf", true));
+            this.ufTextBox.Location = new System.Drawing.Point(67, 102);
+            this.ufTextBox.Name = "ufTextBox";
+            this.ufTextBox.Size = new System.Drawing.Size(172, 20);
+            this.ufTextBox.TabIndex = 11;
+            // 
+            // cidadeTextBox
+            // 
+            this.cidadeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editoraBindingSource, "cidade", true));
+            this.cidadeTextBox.Location = new System.Drawing.Point(67, 75);
+            this.cidadeTextBox.Name = "cidadeTextBox";
+            this.cidadeTextBox.Size = new System.Drawing.Size(172, 20);
+            this.cidadeTextBox.TabIndex = 9;
+            // 
+            // enderecoTextBox
+            // 
+            this.enderecoTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editoraBindingSource, "endereco", true));
+            this.enderecoTextBox.Location = new System.Drawing.Point(67, 23);
+            this.enderecoTextBox.Name = "enderecoTextBox";
+            this.enderecoTextBox.Size = new System.Drawing.Size(172, 20);
+            this.enderecoTextBox.TabIndex = 5;
+            // 
+            // bairroTextBox
+            // 
+            this.bairroTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bairroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editoraBindingSource, "bairro", true));
+            this.bairroTextBox.Location = new System.Drawing.Point(67, 49);
+            this.bairroTextBox.Name = "bairroTextBox";
+            this.bairroTextBox.Size = new System.Drawing.Size(172, 20);
+            this.bairroTextBox.TabIndex = 7;
             // 
             // editoraBindingNavigator
             // 
@@ -270,19 +349,9 @@
             this.editoraBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.editoraBindingNavigator.Name = "editoraBindingNavigator";
             this.editoraBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.editoraBindingNavigator.Size = new System.Drawing.Size(462, 25);
+            this.editoraBindingNavigator.Size = new System.Drawing.Size(498, 25);
             this.editoraBindingNavigator.TabIndex = 18;
             this.editoraBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
@@ -290,34 +359,6 @@
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Excluir";
-            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
             // 
             // bindingNavigatorSeparator
             // 
@@ -338,119 +379,42 @@
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
-            // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // editoraBindingNavigatorSaveItem
-            // 
-            this.editoraBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.editoraBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("editoraBindingNavigatorSaveItem.Image")));
-            this.editoraBindingNavigatorSaveItem.Name = "editoraBindingNavigatorSaveItem";
-            this.editoraBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.editoraBindingNavigatorSaveItem.Text = "Salvar Dados";
-            this.editoraBindingNavigatorSaveItem.Click += new System.EventHandler(this.editoraBindingNavigatorSaveItem_Click_1);
-            // 
             // id_editoraTextBox
             // 
             this.id_editoraTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editoraBindingSource, "id_editora", true));
-            this.id_editoraTextBox.Location = new System.Drawing.Point(67, 36);
+            this.id_editoraTextBox.Location = new System.Drawing.Point(71, 36);
             this.id_editoraTextBox.Name = "id_editoraTextBox";
             this.id_editoraTextBox.ReadOnly = true;
-            this.id_editoraTextBox.Size = new System.Drawing.Size(145, 20);
+            this.id_editoraTextBox.Size = new System.Drawing.Size(144, 20);
             this.id_editoraTextBox.TabIndex = 1;
             // 
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editoraBindingSource, "nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(67, 62);
+            this.nomeTextBox.Location = new System.Drawing.Point(71, 62);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(145, 20);
+            this.nomeTextBox.Size = new System.Drawing.Size(144, 20);
             this.nomeTextBox.TabIndex = 3;
-            // 
-            // enderecoTextBox
-            // 
-            this.enderecoTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editoraBindingSource, "endereco", true));
-            this.enderecoTextBox.Location = new System.Drawing.Point(67, 23);
-            this.enderecoTextBox.Name = "enderecoTextBox";
-            this.enderecoTextBox.Size = new System.Drawing.Size(172, 20);
-            this.enderecoTextBox.TabIndex = 5;
-            // 
-            // bairroTextBox
-            // 
-            this.bairroTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bairroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editoraBindingSource, "bairro", true));
-            this.bairroTextBox.Location = new System.Drawing.Point(67, 49);
-            this.bairroTextBox.Name = "bairroTextBox";
-            this.bairroTextBox.Size = new System.Drawing.Size(172, 20);
-            this.bairroTextBox.TabIndex = 7;
-            // 
-            // cidadeTextBox
-            // 
-            this.cidadeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editoraBindingSource, "cidade", true));
-            this.cidadeTextBox.Location = new System.Drawing.Point(67, 75);
-            this.cidadeTextBox.Name = "cidadeTextBox";
-            this.cidadeTextBox.Size = new System.Drawing.Size(172, 20);
-            this.cidadeTextBox.TabIndex = 9;
-            // 
-            // ufTextBox
-            // 
-            this.ufTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ufTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editoraBindingSource, "uf", true));
-            this.ufTextBox.Location = new System.Drawing.Point(67, 102);
-            this.ufTextBox.Name = "ufTextBox";
-            this.ufTextBox.Size = new System.Drawing.Size(172, 20);
-            this.ufTextBox.TabIndex = 11;
             // 
             // foneTextBox
             // 
             this.foneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editoraBindingSource, "fone", true));
-            this.foneTextBox.Location = new System.Drawing.Point(67, 88);
+            this.foneTextBox.Location = new System.Drawing.Point(71, 88);
             this.foneTextBox.Name = "foneTextBox";
-            this.foneTextBox.Size = new System.Drawing.Size(145, 20);
+            this.foneTextBox.Size = new System.Drawing.Size(144, 20);
             this.foneTextBox.TabIndex = 13;
-            // 
-            // cepTextBox
-            // 
-            this.cepTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cepTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editoraBindingSource, "cep", true));
-            this.cepTextBox.Location = new System.Drawing.Point(67, 128);
-            this.cepTextBox.Name = "cepTextBox";
-            this.cepTextBox.Size = new System.Drawing.Size(172, 20);
-            this.cepTextBox.TabIndex = 15;
             // 
             // cnpjTextBox
             // 
             this.cnpjTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.editoraBindingSource, "cnpj", true));
-            this.cnpjTextBox.Location = new System.Drawing.Point(67, 114);
+            this.cnpjTextBox.Location = new System.Drawing.Point(71, 114);
             this.cnpjTextBox.Name = "cnpjTextBox";
-            this.cnpjTextBox.Size = new System.Drawing.Size(145, 20);
+            this.cnpjTextBox.Size = new System.Drawing.Size(144, 20);
             this.cnpjTextBox.TabIndex = 17;
             // 
             // tabPage2
@@ -486,73 +450,6 @@
             this.editoraDataGridView.Name = "editoraDataGridView";
             this.editoraDataGridView.Size = new System.Drawing.Size(471, 155);
             this.editoraDataGridView.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(471, 70);
-            this.panel1.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 7);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(443, 53);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Digite o nome da editora";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(425, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(-3, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(103, 312);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.cepTextBox);
-            this.groupBox2.Controls.Add(cepLabel);
-            this.groupBox2.Controls.Add(this.ufTextBox);
-            this.groupBox2.Controls.Add(ufLabel);
-            this.groupBox2.Controls.Add(enderecoLabel);
-            this.groupBox2.Controls.Add(this.cidadeTextBox);
-            this.groupBox2.Controls.Add(cidadeLabel);
-            this.groupBox2.Controls.Add(this.enderecoTextBox);
-            this.groupBox2.Controls.Add(this.bairroTextBox);
-            this.groupBox2.Controls.Add(bairroLabel);
-            this.groupBox2.Location = new System.Drawing.Point(217, 34);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(245, 152);
-            this.groupBox2.TabIndex = 19;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Endereço";
-            // 
-            // editoraBindingSource
-            // 
-            this.editoraBindingSource.DataMember = "editora";
-            this.editoraBindingSource.DataSource = this.bibliotecaDataSet;
-            // 
-            // bibliotecaDataSet
-            // 
-            this.bibliotecaDataSet.DataSetName = "bibliotecaDataSet";
-            this.bibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -608,6 +505,33 @@
             this.dataGridViewTextBoxColumn9.HeaderText = "cnpj";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(471, 70);
+            this.panel1.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Location = new System.Drawing.Point(3, 7);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(443, 53);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Digite o nome da editora";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(12, 19);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(425, 20);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // editoraTableAdapter
             // 
             this.editoraTableAdapter.ClearBeforeFill = true;
@@ -624,11 +548,89 @@
             this.tableAdapterManager.perfilTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Excluir";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Mover último";
+            // 
+            // editoraBindingNavigatorSaveItem
+            // 
+            this.editoraBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.editoraBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("editoraBindingNavigatorSaveItem.Image")));
+            this.editoraBindingNavigatorSaveItem.Name = "editoraBindingNavigatorSaveItem";
+            this.editoraBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.editoraBindingNavigatorSaveItem.Text = "Salvar Dados";
+            this.editoraBindingNavigatorSaveItem.Click += new System.EventHandler(this.editoraBindingNavigatorSaveItem_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::Sistema_otec.Properties.Resources.editor;
+            this.pictureBox1.Location = new System.Drawing.Point(-3, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(153, 299);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // Frm_cadEditorar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 309);
+            this.ClientSize = new System.Drawing.Size(673, 294);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);
@@ -644,6 +646,10 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.editoraBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.editoraBindingNavigator)).EndInit();
             this.editoraBindingNavigator.ResumeLayout(false);
             this.editoraBindingNavigator.PerformLayout();
@@ -653,10 +659,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.editoraBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

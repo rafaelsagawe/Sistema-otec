@@ -46,18 +46,11 @@
             this.bibliotecaDataSet = new Sistema_otec.bibliotecaDataSet();
             this.situacaoCheckBox = new System.Windows.Forms.CheckBox();
             this.funcionarioBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.funcionarioBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.id_funcionarioTextBox = new System.Windows.Forms.TextBox();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.loginTextBox = new System.Windows.Forms.TextBox();
@@ -73,9 +66,16 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.funcionarioTableAdapter = new Sistema_otec.bibliotecaDataSetTableAdapters.funcionarioTableAdapter();
             this.tableAdapterManager = new Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.funcionarioBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             id_funcionarioLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             loginLabel = new System.Windows.Forms.Label();
@@ -97,7 +97,7 @@
             // id_funcionarioLabel
             // 
             id_funcionarioLabel.AutoSize = true;
-            id_funcionarioLabel.Location = new System.Drawing.Point(22, 55);
+            id_funcionarioLabel.Location = new System.Drawing.Point(9, 55);
             id_funcionarioLabel.Name = "id_funcionarioLabel";
             id_funcionarioLabel.Size = new System.Drawing.Size(73, 13);
             id_funcionarioLabel.TabIndex = 0;
@@ -106,7 +106,7 @@
             // nomeLabel
             // 
             nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(22, 81);
+            nomeLabel.Location = new System.Drawing.Point(9, 81);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(36, 13);
             nomeLabel.TabIndex = 2;
@@ -115,7 +115,7 @@
             // loginLabel
             // 
             loginLabel.AutoSize = true;
-            loginLabel.Location = new System.Drawing.Point(22, 107);
+            loginLabel.Location = new System.Drawing.Point(9, 107);
             loginLabel.Name = "loginLabel";
             loginLabel.Size = new System.Drawing.Size(32, 13);
             loginLabel.TabIndex = 4;
@@ -124,7 +124,7 @@
             // senhaLabel
             // 
             senhaLabel.AutoSize = true;
-            senhaLabel.Location = new System.Drawing.Point(22, 133);
+            senhaLabel.Location = new System.Drawing.Point(9, 133);
             senhaLabel.Name = "senhaLabel";
             senhaLabel.Size = new System.Drawing.Size(39, 13);
             senhaLabel.TabIndex = 6;
@@ -133,7 +133,7 @@
             // perfilLabel
             // 
             perfilLabel.AutoSize = true;
-            perfilLabel.Location = new System.Drawing.Point(22, 159);
+            perfilLabel.Location = new System.Drawing.Point(9, 159);
             perfilLabel.Name = "perfilLabel";
             perfilLabel.Size = new System.Drawing.Size(32, 13);
             perfilLabel.TabIndex = 8;
@@ -142,7 +142,7 @@
             // situacaoLabel
             // 
             situacaoLabel.AutoSize = true;
-            situacaoLabel.Location = new System.Drawing.Point(22, 192);
+            situacaoLabel.Location = new System.Drawing.Point(9, 192);
             situacaoLabel.Name = "situacaoLabel";
             situacaoLabel.Size = new System.Drawing.Size(50, 13);
             situacaoLabel.TabIndex = 12;
@@ -150,7 +150,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(327, 277);
+            this.button2.Location = new System.Drawing.Point(368, 280);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 7;
@@ -160,7 +160,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(158, 277);
+            this.button1.Location = new System.Drawing.Point(199, 280);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 6;
@@ -173,10 +173,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(104, 8);
+            this.tabControl1.Location = new System.Drawing.Point(169, 8);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(387, 259);
+            this.tabControl1.Size = new System.Drawing.Size(385, 259);
             this.tabControl1.TabIndex = 5;
             // 
             // tabPage1
@@ -200,7 +200,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(379, 233);
+            this.tabPage1.Size = new System.Drawing.Size(377, 233);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -223,7 +223,7 @@
             this.textBox1.Location = new System.Drawing.Point(281, 130);
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '#';
-            this.textBox1.Size = new System.Drawing.Size(90, 20);
+            this.textBox1.Size = new System.Drawing.Size(88, 20);
             this.textBox1.TabIndex = 14;
             // 
             // funcionarioBindingSource
@@ -273,18 +273,9 @@
             this.funcionarioBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.funcionarioBindingNavigator.Name = "funcionarioBindingNavigator";
             this.funcionarioBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.funcionarioBindingNavigator.Size = new System.Drawing.Size(371, 25);
+            this.funcionarioBindingNavigator.Size = new System.Drawing.Size(369, 25);
             this.funcionarioBindingNavigator.TabIndex = 12;
             this.funcionarioBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
             // 
             // bindingNavigatorCountItem
             // 
@@ -292,34 +283,6 @@
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Excluir";
-            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
             // 
             // bindingNavigatorSeparator
             // 
@@ -340,37 +303,10 @@
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
-            // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // funcionarioBindingNavigatorSaveItem
-            // 
-            this.funcionarioBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.funcionarioBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("funcionarioBindingNavigatorSaveItem.Image")));
-            this.funcionarioBindingNavigatorSaveItem.Name = "funcionarioBindingNavigatorSaveItem";
-            this.funcionarioBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.funcionarioBindingNavigatorSaveItem.Text = "Salvar Dados";
-            this.funcionarioBindingNavigatorSaveItem.Click += new System.EventHandler(this.funcionarioBindingNavigatorSaveItem_Click_1);
             // 
             // id_funcionarioTextBox
             // 
@@ -380,7 +316,7 @@
             this.id_funcionarioTextBox.Location = new System.Drawing.Point(101, 52);
             this.id_funcionarioTextBox.Name = "id_funcionarioTextBox";
             this.id_funcionarioTextBox.ReadOnly = true;
-            this.id_funcionarioTextBox.Size = new System.Drawing.Size(270, 20);
+            this.id_funcionarioTextBox.Size = new System.Drawing.Size(268, 20);
             this.id_funcionarioTextBox.TabIndex = 1;
             // 
             // nomeTextBox
@@ -390,7 +326,7 @@
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "nome", true));
             this.nomeTextBox.Location = new System.Drawing.Point(101, 78);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(270, 20);
+            this.nomeTextBox.Size = new System.Drawing.Size(268, 20);
             this.nomeTextBox.TabIndex = 3;
             // 
             // loginTextBox
@@ -400,7 +336,7 @@
             this.loginTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "login", true));
             this.loginTextBox.Location = new System.Drawing.Point(101, 104);
             this.loginTextBox.Name = "loginTextBox";
-            this.loginTextBox.Size = new System.Drawing.Size(270, 20);
+            this.loginTextBox.Size = new System.Drawing.Size(268, 20);
             this.loginTextBox.TabIndex = 5;
             // 
             // senhaTextBox
@@ -411,7 +347,7 @@
             this.senhaTextBox.Location = new System.Drawing.Point(101, 130);
             this.senhaTextBox.Name = "senhaTextBox";
             this.senhaTextBox.PasswordChar = '#';
-            this.senhaTextBox.Size = new System.Drawing.Size(105, 20);
+            this.senhaTextBox.Size = new System.Drawing.Size(103, 20);
             this.senhaTextBox.TabIndex = 7;
             // 
             // perfilTextBox
@@ -421,7 +357,7 @@
             this.perfilTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.funcionarioBindingSource, "perfil", true));
             this.perfilTextBox.Location = new System.Drawing.Point(101, 156);
             this.perfilTextBox.Name = "perfilTextBox";
-            this.perfilTextBox.Size = new System.Drawing.Size(270, 20);
+            this.perfilTextBox.Size = new System.Drawing.Size(268, 20);
             this.perfilTextBox.TabIndex = 9;
             // 
             // tabPage2
@@ -510,16 +446,6 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "situacao";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 316);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // funcionarioTableAdapter
             // 
             this.funcionarioTableAdapter.ClearBeforeFill = true;
@@ -536,11 +462,87 @@
             this.tableAdapterManager.perfilTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Excluir";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Mover último";
+            // 
+            // funcionarioBindingNavigatorSaveItem
+            // 
+            this.funcionarioBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.funcionarioBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("funcionarioBindingNavigatorSaveItem.Image")));
+            this.funcionarioBindingNavigatorSaveItem.Name = "funcionarioBindingNavigatorSaveItem";
+            this.funcionarioBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.funcionarioBindingNavigatorSaveItem.Text = "Salvar Dados";
+            this.funcionarioBindingNavigatorSaveItem.Click += new System.EventHandler(this.funcionarioBindingNavigatorSaveItem_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::Sistema_otec.Properties.Resources.funcionario;
+            this.pictureBox1.Location = new System.Drawing.Point(-2, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(165, 316);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Frm_funcionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 315);
+            this.ClientSize = new System.Drawing.Size(556, 315);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);

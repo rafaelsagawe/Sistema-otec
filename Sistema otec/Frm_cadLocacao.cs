@@ -27,6 +27,11 @@ namespace Sistema_otec
 
         private void Frm_cadLocacao_Load(object sender, EventArgs e)
         {
+            this.locacaoBindingSource.AddNew(); // Ao iniciar o furlulario adiciona u novo registro
+            AlterarData(); // altera as datas 
+            locacaoBindingNavigatorSaveItem_Click(sender, e); // salva o registro
+
+
             // TODO: esta linha de código carrega dados na tabela 'bibliotecaDataSet.locatario'. Você pode movê-la ou removê-la conforme necessário.
             this.locatarioTableAdapter.Fill(this.bibliotecaDataSet.locatario);
             // TODO: esta linha de código carrega dados na tabela 'bibliotecaDataSet.itemLocacao'. Você pode movê-la ou removê-la conforme necessário.
@@ -34,6 +39,7 @@ namespace Sistema_otec
             // TODO: esta linha de código carrega dados na tabela 'bibliotecaDataSet.locacao'. Você pode movê-la ou removê-la conforme necessário.
             this.locacaoTableAdapter.Fill(this.bibliotecaDataSet.locacao);
 
+            this.locacaoBindingSource.MoveLast(); // move para o ultimo registro cadastrado
         }
 
         private void locacaoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -61,7 +67,7 @@ namespace Sistema_otec
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            AlterarData();
+            AlterarData(); // Chamado o metodo de alteração das datas e hora
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

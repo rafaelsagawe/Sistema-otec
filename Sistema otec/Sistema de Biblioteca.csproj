@@ -192,6 +192,11 @@
     <Content Include="Properties\Imagens\Calculator.png" />
     <Content Include="Properties\Imagens\Pie chart.png" />
     <Content Include="Properties\Imagens\Search.png" />
+    <None Include="Resources\funcionario.png" />
+    <None Include="Resources\editor.jpg" />
+    <None Include="Resources\livros.jpg" />
+    <None Include="Resources\5128b7ff4b40f49cd6c0ce8698b9a19a-boy-reading-books-illustration-by-vexels.png" />
+    <None Include="Resources\splash.jpg" />
     <None Include="Resources\Write Document.png" />
     <None Include="Resources\Modify.bmp" />
     <None Include="Resources\Male.bmp" />

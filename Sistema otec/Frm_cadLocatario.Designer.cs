@@ -80,9 +80,8 @@
             this.escolaTextBox = new System.Windows.Forms.TextBox();
             this.profissaoTextBox = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.locatarioTableAdapter = new Sistema_otec.bibliotecaDataSetTableAdapters.locatarioTableAdapter();
-            this.tableAdapterManager = new Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.locatarioDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -99,8 +98,9 @@
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.locatarioTableAdapter = new Sistema_otec.bibliotecaDataSetTableAdapters.locatarioTableAdapter();
+            this.tableAdapterManager = new Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             id_locatarioLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             datanascLabel = new System.Windows.Forms.Label();
@@ -123,9 +123,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.locatarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.locatarioDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.locatarioDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // id_locatarioLabel
@@ -211,7 +211,7 @@
             // foneLabel
             // 
             foneLabel.AutoSize = true;
-            foneLabel.Location = new System.Drawing.Point(262, 62);
+            foneLabel.Location = new System.Drawing.Point(313, 65);
             foneLabel.Name = "foneLabel";
             foneLabel.Size = new System.Drawing.Size(31, 13);
             foneLabel.TabIndex = 16;
@@ -221,7 +221,7 @@
             // fotoLabel
             // 
             fotoLabel.AutoSize = true;
-            fotoLabel.Location = new System.Drawing.Point(262, 92);
+            fotoLabel.Location = new System.Drawing.Point(313, 95);
             fotoLabel.Name = "fotoLabel";
             fotoLabel.Size = new System.Drawing.Size(28, 13);
             fotoLabel.TabIndex = 18;
@@ -231,7 +231,7 @@
             // cpfLabel
             // 
             cpfLabel.AutoSize = true;
-            cpfLabel.Location = new System.Drawing.Point(262, 118);
+            cpfLabel.Location = new System.Drawing.Point(313, 121);
             cpfLabel.Name = "cpfLabel";
             cpfLabel.Size = new System.Drawing.Size(25, 13);
             cpfLabel.TabIndex = 20;
@@ -241,7 +241,7 @@
             // identidadeLabel
             // 
             identidadeLabel.AutoSize = true;
-            identidadeLabel.Location = new System.Drawing.Point(262, 144);
+            identidadeLabel.Location = new System.Drawing.Point(313, 147);
             identidadeLabel.Name = "identidadeLabel";
             identidadeLabel.Size = new System.Drawing.Size(59, 13);
             identidadeLabel.TabIndex = 22;
@@ -251,7 +251,7 @@
             // serieLabel
             // 
             serieLabel.AutoSize = true;
-            serieLabel.Location = new System.Drawing.Point(262, 170);
+            serieLabel.Location = new System.Drawing.Point(313, 173);
             serieLabel.Name = "serieLabel";
             serieLabel.Size = new System.Drawing.Size(32, 13);
             serieLabel.TabIndex = 24;
@@ -261,7 +261,7 @@
             // escolaLabel
             // 
             escolaLabel.AutoSize = true;
-            escolaLabel.Location = new System.Drawing.Point(262, 196);
+            escolaLabel.Location = new System.Drawing.Point(313, 199);
             escolaLabel.Name = "escolaLabel";
             escolaLabel.Size = new System.Drawing.Size(41, 13);
             escolaLabel.TabIndex = 26;
@@ -271,7 +271,7 @@
             // profissaoLabel
             // 
             profissaoLabel.AutoSize = true;
-            profissaoLabel.Location = new System.Drawing.Point(262, 222);
+            profissaoLabel.Location = new System.Drawing.Point(313, 225);
             profissaoLabel.Name = "profissaoLabel";
             profissaoLabel.Size = new System.Drawing.Size(52, 13);
             profissaoLabel.TabIndex = 28;
@@ -280,7 +280,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(407, 290);
+            this.button2.Location = new System.Drawing.Point(430, 290);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 7;
@@ -291,7 +291,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(238, 290);
+            this.button1.Location = new System.Drawing.Point(261, 290);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 6;
@@ -301,12 +301,14 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(76, 7);
+            this.tabControl1.Location = new System.Drawing.Point(156, 7);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(550, 277);
+            this.tabControl1.Size = new System.Drawing.Size(597, 277);
             this.tabControl1.TabIndex = 5;
             this.tabControl1.UseWaitCursor = true;
             // 
@@ -348,7 +350,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(542, 251);
+            this.tabPage1.Size = new System.Drawing.Size(589, 251);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -380,7 +382,7 @@
             this.locatarioBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.locatarioBindingNavigator.Name = "locatarioBindingNavigator";
             this.locatarioBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.locatarioBindingNavigator.Size = new System.Drawing.Size(534, 25);
+            this.locatarioBindingNavigator.Size = new System.Drawing.Size(581, 25);
             this.locatarioBindingNavigator.TabIndex = 30;
             this.locatarioBindingNavigator.Text = "bindingNavigator1";
             this.locatarioBindingNavigator.UseWaitCursor = true;
@@ -495,7 +497,7 @@
             this.id_locatarioTextBox.Location = new System.Drawing.Point(73, 36);
             this.id_locatarioTextBox.Name = "id_locatarioTextBox";
             this.id_locatarioTextBox.ReadOnly = true;
-            this.id_locatarioTextBox.Size = new System.Drawing.Size(174, 20);
+            this.id_locatarioTextBox.Size = new System.Drawing.Size(507, 20);
             this.id_locatarioTextBox.TabIndex = 1;
             this.id_locatarioTextBox.UseWaitCursor = true;
             // 
@@ -504,7 +506,7 @@
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "nome", true));
             this.nomeTextBox.Location = new System.Drawing.Point(73, 62);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(174, 20);
+            this.nomeTextBox.Size = new System.Drawing.Size(217, 20);
             this.nomeTextBox.TabIndex = 3;
             this.nomeTextBox.UseWaitCursor = true;
             // 
@@ -513,7 +515,7 @@
             this.datanascDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.locatarioBindingSource, "datanasc", true));
             this.datanascDateTimePicker.Location = new System.Drawing.Point(73, 88);
             this.datanascDateTimePicker.Name = "datanascDateTimePicker";
-            this.datanascDateTimePicker.Size = new System.Drawing.Size(174, 20);
+            this.datanascDateTimePicker.Size = new System.Drawing.Size(217, 20);
             this.datanascDateTimePicker.TabIndex = 5;
             this.datanascDateTimePicker.UseWaitCursor = true;
             // 
@@ -522,7 +524,7 @@
             this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "endereco", true));
             this.enderecoTextBox.Location = new System.Drawing.Point(73, 114);
             this.enderecoTextBox.Name = "enderecoTextBox";
-            this.enderecoTextBox.Size = new System.Drawing.Size(174, 20);
+            this.enderecoTextBox.Size = new System.Drawing.Size(217, 20);
             this.enderecoTextBox.TabIndex = 7;
             this.enderecoTextBox.UseWaitCursor = true;
             // 
@@ -531,7 +533,7 @@
             this.bairroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "bairro", true));
             this.bairroTextBox.Location = new System.Drawing.Point(73, 140);
             this.bairroTextBox.Name = "bairroTextBox";
-            this.bairroTextBox.Size = new System.Drawing.Size(174, 20);
+            this.bairroTextBox.Size = new System.Drawing.Size(217, 20);
             this.bairroTextBox.TabIndex = 9;
             this.bairroTextBox.UseWaitCursor = true;
             // 
@@ -540,7 +542,7 @@
             this.cidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "cidade", true));
             this.cidadeTextBox.Location = new System.Drawing.Point(73, 166);
             this.cidadeTextBox.Name = "cidadeTextBox";
-            this.cidadeTextBox.Size = new System.Drawing.Size(174, 20);
+            this.cidadeTextBox.Size = new System.Drawing.Size(217, 20);
             this.cidadeTextBox.TabIndex = 11;
             this.cidadeTextBox.UseWaitCursor = true;
             // 
@@ -549,7 +551,7 @@
             this.ufTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "uf", true));
             this.ufTextBox.Location = new System.Drawing.Point(73, 193);
             this.ufTextBox.Name = "ufTextBox";
-            this.ufTextBox.Size = new System.Drawing.Size(174, 20);
+            this.ufTextBox.Size = new System.Drawing.Size(217, 20);
             this.ufTextBox.TabIndex = 13;
             this.ufTextBox.UseWaitCursor = true;
             // 
@@ -558,14 +560,14 @@
             this.cepTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "cep", true));
             this.cepTextBox.Location = new System.Drawing.Point(73, 219);
             this.cepTextBox.Name = "cepTextBox";
-            this.cepTextBox.Size = new System.Drawing.Size(174, 20);
+            this.cepTextBox.Size = new System.Drawing.Size(217, 20);
             this.cepTextBox.TabIndex = 15;
             this.cepTextBox.UseWaitCursor = true;
             // 
             // foneTextBox
             // 
             this.foneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "fone", true));
-            this.foneTextBox.Location = new System.Drawing.Point(329, 59);
+            this.foneTextBox.Location = new System.Drawing.Point(380, 62);
             this.foneTextBox.Name = "foneTextBox";
             this.foneTextBox.Size = new System.Drawing.Size(200, 20);
             this.foneTextBox.TabIndex = 17;
@@ -574,7 +576,7 @@
             // fotoTextBox
             // 
             this.fotoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "foto", true));
-            this.fotoTextBox.Location = new System.Drawing.Point(329, 89);
+            this.fotoTextBox.Location = new System.Drawing.Point(380, 92);
             this.fotoTextBox.Name = "fotoTextBox";
             this.fotoTextBox.Size = new System.Drawing.Size(200, 20);
             this.fotoTextBox.TabIndex = 19;
@@ -583,7 +585,7 @@
             // cpfTextBox
             // 
             this.cpfTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "cpf", true));
-            this.cpfTextBox.Location = new System.Drawing.Point(329, 115);
+            this.cpfTextBox.Location = new System.Drawing.Point(380, 118);
             this.cpfTextBox.Name = "cpfTextBox";
             this.cpfTextBox.Size = new System.Drawing.Size(200, 20);
             this.cpfTextBox.TabIndex = 21;
@@ -592,7 +594,7 @@
             // identidadeTextBox
             // 
             this.identidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "identidade", true));
-            this.identidadeTextBox.Location = new System.Drawing.Point(329, 141);
+            this.identidadeTextBox.Location = new System.Drawing.Point(380, 144);
             this.identidadeTextBox.Name = "identidadeTextBox";
             this.identidadeTextBox.Size = new System.Drawing.Size(200, 20);
             this.identidadeTextBox.TabIndex = 23;
@@ -601,7 +603,7 @@
             // serieTextBox
             // 
             this.serieTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "serie", true));
-            this.serieTextBox.Location = new System.Drawing.Point(329, 167);
+            this.serieTextBox.Location = new System.Drawing.Point(380, 170);
             this.serieTextBox.Name = "serieTextBox";
             this.serieTextBox.Size = new System.Drawing.Size(200, 20);
             this.serieTextBox.TabIndex = 25;
@@ -610,7 +612,7 @@
             // escolaTextBox
             // 
             this.escolaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "escola", true));
-            this.escolaTextBox.Location = new System.Drawing.Point(329, 193);
+            this.escolaTextBox.Location = new System.Drawing.Point(380, 196);
             this.escolaTextBox.Name = "escolaTextBox";
             this.escolaTextBox.Size = new System.Drawing.Size(200, 20);
             this.escolaTextBox.TabIndex = 27;
@@ -619,7 +621,7 @@
             // profissaoTextBox
             // 
             this.profissaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locatarioBindingSource, "profissao", true));
-            this.profissaoTextBox.Location = new System.Drawing.Point(329, 219);
+            this.profissaoTextBox.Location = new System.Drawing.Point(380, 222);
             this.profissaoTextBox.Name = "profissaoTextBox";
             this.profissaoTextBox.Size = new System.Drawing.Size(200, 20);
             this.profissaoTextBox.TabIndex = 29;
@@ -634,37 +636,31 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(542, 251);
+            this.tabPage2.Size = new System.Drawing.Size(609, 251);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.UseWaitCursor = true;
             // 
-            // pictureBox1
+            // groupBox1
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(-4, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(79, 323);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.UseWaitCursor = true;
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Location = new System.Drawing.Point(5, 5);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(532, 47);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Busca locatario";
+            this.groupBox1.UseWaitCursor = true;
             // 
-            // locatarioTableAdapter
+            // textBox1
             // 
-            this.locatarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.editoraTableAdapter = null;
-            this.tableAdapterManager.funcionarioTableAdapter = null;
-            this.tableAdapterManager.itemLocacaoTableAdapter = null;
-            this.tableAdapterManager.livrosTableAdapter = null;
-            this.tableAdapterManager.locacaoTableAdapter = null;
-            this.tableAdapterManager.locatarioTableAdapter = this.locatarioTableAdapter;
-            this.tableAdapterManager.perfilTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.textBox1.Location = new System.Drawing.Point(6, 17);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(520, 20);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.UseWaitCursor = true;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // locatarioDataGridView
             // 
@@ -690,8 +686,9 @@
             this.locatarioDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.locatarioDataGridView.Location = new System.Drawing.Point(3, 58);
             this.locatarioDataGridView.Name = "locatarioDataGridView";
-            this.locatarioDataGridView.Size = new System.Drawing.Size(534, 188);
+            this.locatarioDataGridView.Size = new System.Drawing.Size(601, 188);
             this.locatarioDataGridView.TabIndex = 0;
+            this.locatarioDataGridView.UseWaitCursor = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -783,29 +780,39 @@
             this.dataGridViewTextBoxColumn15.HeaderText = "profissao";
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             // 
-            // groupBox1
+            // locatarioTableAdapter
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(5, 5);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(532, 47);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Busca locatario";
+            this.locatarioTableAdapter.ClearBeforeFill = true;
             // 
-            // textBox1
+            // tableAdapterManager
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(520, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.editoraTableAdapter = null;
+            this.tableAdapterManager.funcionarioTableAdapter = null;
+            this.tableAdapterManager.itemLocacaoTableAdapter = null;
+            this.tableAdapterManager.livrosTableAdapter = null;
+            this.tableAdapterManager.locacaoTableAdapter = null;
+            this.tableAdapterManager.locatarioTableAdapter = this.locatarioTableAdapter;
+            this.tableAdapterManager.perfilTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Sistema_otec.bibliotecaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::Sistema_otec.Properties.Resources._5128b7ff4b40f49cd6c0ce8698b9a19a_boy_reading_books_illustration_by_vexels;
+            this.pictureBox1.Location = new System.Drawing.Point(-4, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(155, 323);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.UseWaitCursor = true;
             // 
             // Frm_cadLocatario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(626, 325);
+            this.ClientSize = new System.Drawing.Size(755, 325);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);
@@ -828,10 +835,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.locatarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.locatarioDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.locatarioDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

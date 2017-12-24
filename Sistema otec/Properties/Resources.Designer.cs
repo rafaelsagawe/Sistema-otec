@@ -73,6 +73,16 @@ namespace Sistema_otec.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5128b7ff4b40f49cd6c0ce8698b9a19a_boy_reading_books_illustration_by_vexels {
+            get {
+                object obj = ResourceManager.GetObject("5128b7ff4b40f49cd6c0ce8698b9a19a-boy-reading-books-illustration-by-vexels", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _860_main_library_bacteria {
             get {
                 object obj = ResourceManager.GetObject("860_main_library_bacteria", resourceCulture);
@@ -143,6 +153,16 @@ namespace Sistema_otec.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap editor {
+            get {
+                object obj = ResourceManager.GetObject("editor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Erase {
             get {
                 object obj = ResourceManager.GetObject("Erase", resourceCulture);
@@ -186,6 +206,16 @@ namespace Sistema_otec.Properties {
         internal static System.Drawing.Bitmap Folder {
             get {
                 object obj = ResourceManager.GetObject("Folder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap funcionario {
+            get {
+                object obj = ResourceManager.GetObject("funcionario", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -256,6 +286,16 @@ namespace Sistema_otec.Properties {
         internal static System.Drawing.Bitmap Key {
             get {
                 object obj = ResourceManager.GetObject("Key", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap livros {
+            get {
+                object obj = ResourceManager.GetObject("livros", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -356,6 +396,16 @@ namespace Sistema_otec.Properties {
         internal static System.Drawing.Bitmap Search {
             get {
                 object obj = ResourceManager.GetObject("Search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap splash {
+            get {
+                object obj = ResourceManager.GetObject("splash", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
