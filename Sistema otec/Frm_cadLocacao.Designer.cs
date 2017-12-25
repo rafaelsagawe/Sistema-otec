@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label id_locacaoLabel;
             System.Windows.Forms.Label id_locatarioLabel;
             System.Windows.Forms.Label horaLabel;
             System.Windows.Forms.Label data_saidaLabel;
@@ -63,6 +62,11 @@
             this.locacaoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.id_locacaoTextBox = new System.Windows.Forms.TextBox();
             this.itemLocacaoDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.livrosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemLocacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -71,13 +75,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.locatarioTableAdapter = new Sistema_otec.bibliotecaDataSetTableAdapters.locatarioTableAdapter();
             this.button3 = new System.Windows.Forms.Button();
-            this.livrosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.livrosTableAdapter = new Sistema_otec.bibliotecaDataSetTableAdapters.livrosTableAdapter();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            id_locacaoLabel = new System.Windows.Forms.Label();
             id_locatarioLabel = new System.Windows.Forms.Label();
             horaLabel = new System.Windows.Forms.Label();
             data_saidaLabel = new System.Windows.Forms.Label();
@@ -89,20 +87,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.locacaoBindingNavigator)).BeginInit();
             this.locacaoBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemLocacaoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.livrosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemLocacaoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.livrosBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // id_locacaoLabel
-            // 
-            id_locacaoLabel.AutoSize = true;
-            id_locacaoLabel.Location = new System.Drawing.Point(308, 395);
-            id_locacaoLabel.Name = "id_locacaoLabel";
-            id_locacaoLabel.Size = new System.Drawing.Size(59, 13);
-            id_locacaoLabel.TabIndex = 0;
-            id_locacaoLabel.Text = "id locacao:";
-            id_locacaoLabel.Click += new System.EventHandler(this.id_locacaoLabel_Click);
             // 
             // id_locatarioLabel
             // 
@@ -386,7 +374,7 @@
             this.id_locacaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locacaoBindingSource, "id_locacao", true));
             this.id_locacaoTextBox.Location = new System.Drawing.Point(373, 395);
             this.id_locacaoTextBox.Name = "id_locacaoTextBox";
-            this.id_locacaoTextBox.Size = new System.Drawing.Size(72, 20);
+            this.id_locacaoTextBox.Size = new System.Drawing.Size(0, 20);
             this.id_locacaoTextBox.TabIndex = 1;
             // 
             // itemLocacaoDataGridView
@@ -404,81 +392,6 @@
             this.itemLocacaoDataGridView.Size = new System.Drawing.Size(398, 171);
             this.itemLocacaoDataGridView.TabIndex = 5;
             this.itemLocacaoDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemLocacaoDataGridView_CellContentClick);
-            // 
-            // itemLocacaoBindingSource
-            // 
-            this.itemLocacaoBindingSource.DataMember = "locacaoitemLocacao";
-            this.itemLocacaoBindingSource.DataSource = this.locacaoBindingSource;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(110, 153);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Codigo do livro";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(113, 175);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 20);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
-            // 
-            // button2
-            // 
-            this.button2.Image = global::Sistema_otec.Properties.Resources.Remove;
-            this.button2.Location = new System.Drawing.Point(296, 167);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(32, 35);
-            this.button2.TabIndex = 9;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Image = global::Sistema_otec.Properties.Resources.Add;
-            this.button1.Location = new System.Drawing.Point(257, 167);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(32, 35);
-            this.button1.TabIndex = 8;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 420);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // locatarioTableAdapter
-            // 
-            this.locatarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(121, 385);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Retirar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // livrosBindingSource
-            // 
-            this.livrosBindingSource.DataMember = "livros";
-            this.livrosBindingSource.DataSource = this.bibliotecaDataSet;
-            // 
-            // livrosTableAdapter
-            // 
-            this.livrosTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -507,12 +420,88 @@
             this.dataGridViewTextBoxColumn3.ValueMember = "id_livro";
             this.dataGridViewTextBoxColumn3.Width = 300;
             // 
+            // livrosBindingSource
+            // 
+            this.livrosBindingSource.DataMember = "livros";
+            this.livrosBindingSource.DataSource = this.bibliotecaDataSet;
+            // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "data_devolucao";
             this.dataGridViewTextBoxColumn4.HeaderText = "data_devolucao";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.Visible = false;
+            // 
+            // itemLocacaoBindingSource
+            // 
+            this.itemLocacaoBindingSource.DataMember = "locacaoitemLocacao";
+            this.itemLocacaoBindingSource.DataSource = this.locacaoBindingSource;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label2.Location = new System.Drawing.Point(110, 153);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Codigo do livro";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(113, 175);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(136, 20);
+            this.textBox1.TabIndex = 7;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // button2
+            // 
+            this.button2.Image = global::Sistema_otec.Properties.Resources.Remove;
+            this.button2.Location = new System.Drawing.Point(296, 167);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(32, 35);
+            this.button2.TabIndex = 9;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Image = global::Sistema_otec.Properties.Resources.Add;
+            this.button1.Location = new System.Drawing.Point(257, 167);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(32, 35);
+            this.button1.TabIndex = 8;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 420);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // locatarioTableAdapter
+            // 
+            this.locatarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(105, 387);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(144, 23);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "Retirar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // livrosTableAdapter
+            // 
+            this.livrosTableAdapter.ClearBeforeFill = true;
             // 
             // Frm_cadLocacao
             // 
@@ -525,7 +514,6 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.itemLocacaoDataGridView);
-            this.Controls.Add(id_locacaoLabel);
             this.Controls.Add(this.locacaoBindingNavigator);
             this.Controls.Add(this.id_locacaoTextBox);
             this.Controls.Add(this.groupBox1);
@@ -535,7 +523,7 @@
             this.MinimizeBox = false;
             this.Name = "Frm_cadLocacao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frm_cadLocacao";
+            this.Text = "Formulario de locação";
             this.Load += new System.EventHandler(this.Frm_cadLocacao_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -546,9 +534,9 @@
             this.locacaoBindingNavigator.ResumeLayout(false);
             this.locacaoBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemLocacaoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.livrosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemLocacaoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.livrosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -106,7 +106,23 @@ namespace Sistema_otec
 
         private void button3_Click(object sender, EventArgs e)
         {
-            locacaoBindingNavigatorSaveItem_Click( sender,  e);
+            if ((id_locatarioTextBox.Text != "") && (comboBox1.Text != "")) // verifica se não estão vazios o codigo e nome do locatario 
+            {
+                if (itemLocacaoDataGridView.RowCount > 1)
+                {
+                    locacaoBindingNavigatorSaveItem_Click(sender, e);
+                    MessageBox.Show("Locação realizada con socesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Informe o Livro", "erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Informe o Locatario", "erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -117,6 +133,7 @@ namespace Sistema_otec
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             int idx;
+            bool flag = false;
             try
             {
                 // se a pessoa pressionar enter realiza a busca de livro
@@ -126,8 +143,26 @@ namespace Sistema_otec
                     this.livrosTableAdapter.Fill(bibliotecaDataSet.livros);
                     if (idx == 1)
                         {
-                        this.bibliotecaDataSet.itemLocacao.Rows.Add(null, Convert.ToInt32(id_locacaoTextBox.Text), Convert.ToInt32(textBox1.Text));
+                        String titular = this.bibliotecaDataSet.livros.FindByid_livro(Convert.ToInt32(textBox1.Text)).titular;
+                            for ( int i = 0; i < itemLocacaoDataGridView.RowCount; i++)
+                            {
+                            if (itemLocacaoDataGridView[2, i].EditedFormattedValue.ToString() == titular)
+                            {
+                                flag = true;
+                                break;
+                            }
+                            }
+                            if (flag)
+                            {
+                                MessageBox.Show("Livro ja na cesta!");
+                            }
+                            else
+                            {
+                            this.bibliotecaDataSet.itemLocacao.Rows.Add(null, Convert.ToInt32(id_locacaoTextBox.Text), Convert.ToInt32(textBox1.Text));
+
                         }
+                        textBox1.Clear();
+                    }
                     else
                         {
                         MessageBox.Show("Livro não encontrado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -147,6 +182,16 @@ namespace Sistema_otec
             // DataSoucer deve escolher a tabela livro
             // DisplayMember o titulo do Livro
             // ValueMember o id do livro
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.itemLocacaoBindingSource.RemoveCurrent();
         }
     }
 }
