@@ -38,9 +38,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.id_locatarioTextBox = new System.Windows.Forms.TextBox();
             this.locacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibliotecaDataSet = new Sistema_otec.bibliotecaDataSet();
+            this.locatarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.id_locatarioTextBox = new System.Windows.Forms.TextBox();
             this.horaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.data_saidaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.data_entregaDateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -62,18 +63,20 @@
             this.locacaoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.id_locacaoTextBox = new System.Windows.Forms.TextBox();
             this.itemLocacaoDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemLocacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.locatarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.locatarioTableAdapter = new Sistema_otec.bibliotecaDataSetTableAdapters.locatarioTableAdapter();
+            this.button3 = new System.Windows.Forms.Button();
+            this.livrosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.livrosTableAdapter = new Sistema_otec.bibliotecaDataSetTableAdapters.livrosTableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             id_locacaoLabel = new System.Windows.Forms.Label();
             id_locatarioLabel = new System.Windows.Forms.Label();
             horaLabel = new System.Windows.Forms.Label();
@@ -82,22 +85,24 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.locacaoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locatarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.locacaoBindingNavigator)).BeginInit();
             this.locacaoBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemLocacaoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemLocacaoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.locatarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.livrosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // id_locacaoLabel
             // 
             id_locacaoLabel.AutoSize = true;
-            id_locacaoLabel.Location = new System.Drawing.Point(166, 398);
+            id_locacaoLabel.Location = new System.Drawing.Point(308, 395);
             id_locacaoLabel.Name = "id_locacaoLabel";
             id_locacaoLabel.Size = new System.Drawing.Size(59, 13);
             id_locacaoLabel.TabIndex = 0;
             id_locacaoLabel.Text = "id locacao:";
+            id_locacaoLabel.Click += new System.EventHandler(this.id_locacaoLabel_Click);
             // 
             // id_locatarioLabel
             // 
@@ -147,7 +152,7 @@
             this.groupBox1.Controls.Add(this.data_saidaDateTimePicker);
             this.groupBox1.Controls.Add(data_entregaLabel);
             this.groupBox1.Controls.Add(this.data_entregaDateTimePicker);
-            this.groupBox1.Location = new System.Drawing.Point(105, 28);
+            this.groupBox1.Location = new System.Drawing.Point(105, 7);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(391, 120);
             this.groupBox1.TabIndex = 1;
@@ -177,15 +182,6 @@
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboBox1.SelectionChangeCommitted += new System.EventHandler(this.comboBox1_SelectionChangeCommitted);
             // 
-            // id_locatarioTextBox
-            // 
-            this.id_locatarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locacaoBindingSource, "id_locatario", true));
-            this.id_locatarioTextBox.Location = new System.Drawing.Point(10, 82);
-            this.id_locatarioTextBox.Name = "id_locatarioTextBox";
-            this.id_locatarioTextBox.Size = new System.Drawing.Size(110, 20);
-            this.id_locatarioTextBox.TabIndex = 3;
-            this.id_locatarioTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.id_locatarioTextBox_KeyPress);
-            // 
             // locacaoBindingSource
             // 
             this.locacaoBindingSource.DataMember = "locacao";
@@ -195,6 +191,20 @@
             // 
             this.bibliotecaDataSet.DataSetName = "bibliotecaDataSet";
             this.bibliotecaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // locatarioBindingSource
+            // 
+            this.locatarioBindingSource.DataMember = "locatario";
+            this.locatarioBindingSource.DataSource = this.bibliotecaDataSet;
+            // 
+            // id_locatarioTextBox
+            // 
+            this.id_locatarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locacaoBindingSource, "id_locatario", true));
+            this.id_locatarioTextBox.Location = new System.Drawing.Point(10, 82);
+            this.id_locatarioTextBox.Name = "id_locatarioTextBox";
+            this.id_locatarioTextBox.Size = new System.Drawing.Size(110, 20);
+            this.id_locatarioTextBox.TabIndex = 3;
+            this.id_locatarioTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.id_locatarioTextBox_KeyPress);
             // 
             // horaDateTimePicker
             // 
@@ -271,9 +281,10 @@
             this.locacaoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.locacaoBindingNavigator.Name = "locacaoBindingNavigator";
             this.locacaoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.locacaoBindingNavigator.Size = new System.Drawing.Size(416, 25);
+            this.locacaoBindingNavigator.Size = new System.Drawing.Size(408, 25);
             this.locacaoBindingNavigator.TabIndex = 2;
             this.locacaoBindingNavigator.Text = "bindingNavigator1";
+            this.locacaoBindingNavigator.Visible = false;
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -373,9 +384,9 @@
             // id_locacaoTextBox
             // 
             this.id_locacaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.locacaoBindingSource, "id_locacao", true));
-            this.id_locacaoTextBox.Location = new System.Drawing.Point(245, 395);
+            this.id_locacaoTextBox.Location = new System.Drawing.Point(373, 395);
             this.id_locacaoTextBox.Name = "id_locacaoTextBox";
-            this.id_locacaoTextBox.Size = new System.Drawing.Size(200, 20);
+            this.id_locacaoTextBox.Size = new System.Drawing.Size(72, 20);
             this.id_locacaoTextBox.TabIndex = 1;
             // 
             // itemLocacaoDataGridView
@@ -390,32 +401,9 @@
             this.itemLocacaoDataGridView.DataSource = this.itemLocacaoBindingSource;
             this.itemLocacaoDataGridView.Location = new System.Drawing.Point(106, 208);
             this.itemLocacaoDataGridView.Name = "itemLocacaoDataGridView";
-            this.itemLocacaoDataGridView.Size = new System.Drawing.Size(390, 171);
+            this.itemLocacaoDataGridView.Size = new System.Drawing.Size(398, 171);
             this.itemLocacaoDataGridView.TabIndex = 5;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_item";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id_item";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "id_locacao";
-            this.dataGridViewTextBoxColumn2.HeaderText = "id_locacao";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "id_livro";
-            this.dataGridViewTextBoxColumn3.HeaderText = "id_livro";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "data_devolucao";
-            this.dataGridViewTextBoxColumn4.HeaderText = "data_devolucao";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.itemLocacaoDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemLocacaoDataGridView_CellContentClick);
             // 
             // itemLocacaoBindingSource
             // 
@@ -434,10 +422,12 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(113, 170);
+            this.textBox1.Location = new System.Drawing.Point(113, 175);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(136, 20);
             this.textBox1.TabIndex = 7;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // button2
             // 
@@ -467,20 +457,69 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // locatarioBindingSource
-            // 
-            this.locatarioBindingSource.DataMember = "locatario";
-            this.locatarioBindingSource.DataSource = this.bibliotecaDataSet;
-            // 
             // locatarioTableAdapter
             // 
             this.locatarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(121, 385);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "Retirar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // livrosBindingSource
+            // 
+            this.livrosBindingSource.DataMember = "livros";
+            this.livrosBindingSource.DataSource = this.bibliotecaDataSet;
+            // 
+            // livrosTableAdapter
+            // 
+            this.livrosTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_item";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id_item";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            this.dataGridViewTextBoxColumn1.Width = 350;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "id_locacao";
+            this.dataGridViewTextBoxColumn2.HeaderText = "id_locacao";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "id_livro";
+            this.dataGridViewTextBoxColumn3.DataSource = this.livrosBindingSource;
+            this.dataGridViewTextBoxColumn3.DisplayMember = "titular";
+            this.dataGridViewTextBoxColumn3.HeaderText = "id_livro";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn3.ValueMember = "id_livro";
+            this.dataGridViewTextBoxColumn3.Width = 300;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "data_devolucao";
+            this.dataGridViewTextBoxColumn4.HeaderText = "data_devolucao";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Visible = false;
             // 
             // Frm_cadLocacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 420);
+            this.ClientSize = new System.Drawing.Size(508, 420);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
@@ -502,13 +541,14 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.locacaoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliotecaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locatarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.locacaoBindingNavigator)).EndInit();
             this.locacaoBindingNavigator.ResumeLayout(false);
             this.locacaoBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemLocacaoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemLocacaoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.locatarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.livrosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -545,15 +585,18 @@
         private bibliotecaDataSetTableAdapters.itemLocacaoTableAdapter itemLocacaoTableAdapter;
         private System.Windows.Forms.BindingSource itemLocacaoBindingSource;
         private System.Windows.Forms.DataGridView itemLocacaoDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.BindingSource locatarioBindingSource;
         private bibliotecaDataSetTableAdapters.locatarioTableAdapter locatarioTableAdapter;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.BindingSource livrosBindingSource;
+        private bibliotecaDataSetTableAdapters.livrosTableAdapter livrosTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }

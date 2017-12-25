@@ -27,6 +27,8 @@ namespace Sistema_otec
 
         private void Frm_cadLocacao_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'bibliotecaDataSet.livros'. Você pode movê-la ou removê-la conforme necessário.
+            this.livrosTableAdapter.Fill(this.bibliotecaDataSet.livros);
             this.locacaoBindingSource.AddNew(); // Ao iniciar o furlulario adiciona u novo registro
             AlterarData(); // altera as datas 
             locacaoBindingNavigatorSaveItem_Click(sender, e); // salva o registro
@@ -72,7 +74,7 @@ namespace Sistema_otec
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Para o ComboBox ter a lista de locatario foi configurado da seguite forma:
+            // Para o ComboBox ter a lista de locatario foi configurado da seguite forma (DBlookUp):
             // 1 - DataSource -> outras Fontes de Dados do Projeto -> bibliotecaDataSet -> locatario "tabela"
             // 2 - DisplayMenber -> nome
             // 3 - ValueMenber -> id_locatario
@@ -95,6 +97,56 @@ namespace Sistema_otec
         private void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)
         {
             id_locatarioTextBox.Text = comboBox1.SelectedValue.ToString(); // escolhe o nome do locatario e muda o codigo
+        }
+
+        private void id_locacaoLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            locacaoBindingNavigatorSaveItem_Click( sender,  e);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int idx;
+            try
+            {
+                // se a pessoa pressionar enter realiza a busca de livro
+                if (e.KeyChar == 13)
+                {
+                    idx = this.livrosTableAdapter.FillBy_IdLivro(bibliotecaDataSet.livros, Convert.ToInt32(textBox1.Text)); //realiza uma consulta no banco de dados para verificar a existencia do id do livro
+                    this.livrosTableAdapter.Fill(bibliotecaDataSet.livros);
+                    if (idx == 1)
+                        {
+                        this.bibliotecaDataSet.itemLocacao.Rows.Add(null, Convert.ToInt32(id_locacaoTextBox.Text), Convert.ToInt32(textBox1.Text));
+                        }
+                    else
+                        {
+                        MessageBox.Show("Livro não encontrado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro" + ex.Message);
+            }
+        }
+
+        private void itemLocacaoDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // para aparecer o nome do livro no lugar do id foi realizado um DBLookUp
+            // na edição de colunas, na coluna do id do livro o ColumnType foi alterado de TextBox para ComboBox.
+            // DataSoucer deve escolher a tabela livro
+            // DisplayMember o titulo do Livro
+            // ValueMember o id do livro
         }
     }
 }
