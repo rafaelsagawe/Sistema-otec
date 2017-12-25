@@ -192,6 +192,7 @@
     <Content Include="Properties\Imagens\Calculator.png" />
     <Content Include="Properties\Imagens\Pie chart.png" />
     <Content Include="Properties\Imagens\Search.png" />
+    <None Include="Resources\cesta de livros.jpg" />
     <None Include="Resources\funcionario.png" />
     <None Include="Resources\editor.jpg" />
     <None Include="Resources\livros.jpg" />
