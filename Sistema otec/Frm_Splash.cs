@@ -29,7 +29,7 @@ namespace Sistema_otec
                 timer1.Enabled = false;
                 Frm_login frm = new Frm_login();
                 frm.Show();
-                this.Visible = false;
+                this.Visible = false; // oculta a tela de splash
             }
         }
 
